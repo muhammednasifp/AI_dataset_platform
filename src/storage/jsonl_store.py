@@ -1,0 +1,65 @@
+import json
+from dataclasses import asdict
+from src.models.document import Document
+
+class JSONLStore:
+    
+    def __init__(self,path):
+        self.path=path
+
+    def save_one(self,document): 
+        data=asdict(document)
+        json_string=json.dumps(data)
+
+        with open(self.path,"a") as file:
+            
+            file.write(json_string)
+            file.write("\n")
+
+    def save_many(self,documents):
+        for document in documents:
+            self.save_one(document=document)
+
+    def count(self):
+        count=0
+
+        with open(self.path,"r") as file:
+            for line in file:
+                count=count+1
+        print(count)
+
+    def read_all(self):
+        documents=[]
+        with open(self.path,"r") as file:
+            for line in file:
+                data=json.loads(line)
+                doc=Document(**data)
+                documents.append(doc)      
+        return documents
+
+# store=JSONLStore("data/raw/documents.jsonl")
+# docs=[
+#     Document(id="1",
+#     title="Python Basics",
+#     url="https://example.com",
+#     content="Python intro",
+#     source="python_docs"
+#     ),
+#     Document(id="2",
+#     title="Python Basics",
+#     url="https://example.com",
+#     content="Python intro",
+#     source="python_docs"
+#     ),
+#     Document(id="3",
+#     title="Python Basics",
+#     url="https://example.com",
+#     content="Python intro",
+#     source="python_docs"
+#     )
+# ]
+
+# #store.save_many(docs)
+# #store.count()
+# documents=store.read_all()
+# print(documents)
