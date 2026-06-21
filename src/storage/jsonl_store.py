@@ -1,18 +1,25 @@
 import json
+import os
 from dataclasses import asdict
 from src.models.document import Document
 
 class JSONLStore:
     
     def __init__(self,path):
-        self.path=path
 
+        self.path=path
+        directory = os.path.dirname(path)
+
+        os.makedirs(
+        directory,
+        exist_ok=True
+    )
+    
     def save_one(self,document): 
         data=asdict(document)
         json_string=json.dumps(data)
 
         with open(self.path,"a") as file:
-            
             file.write(json_string)
             file.write("\n")
 
@@ -26,7 +33,8 @@ class JSONLStore:
         with open(self.path,"r") as file:
             for line in file:
                 count=count+1
-        print(count)
+        
+        return count
 
     def read_all(self):
         documents=[]
@@ -36,6 +44,27 @@ class JSONLStore:
                 doc=Document(**data)
                 documents.append(doc)      
         return documents
+
+    def replace_all(self,documents):
+
+        with open(self.path,"w") as file:
+            for document in documents:
+                data=asdict(document)
+                json_string=json.dumps(data)
+                file.write(json_string)
+                file.write("\n")
+    # replace_all()
+    #
+    # Replaces the entire dataset with a new
+    # collection of documents.
+    #
+    # Uses write mode ("w") to clear existing
+    # contents before writing new records.
+    #
+    # Common use cases:
+    # - Deduplication
+    # - Dataset cleaning
+    # - Dataset rebuilding
 
 # store=JSONLStore("data/raw/documents.jsonl")
 # docs=[

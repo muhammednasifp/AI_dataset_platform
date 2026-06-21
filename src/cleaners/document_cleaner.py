@@ -1,5 +1,3 @@
-
-
 class DocumentCleaner:
 
     def clean(self,document):

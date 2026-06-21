@@ -51,21 +51,21 @@ class DatasetAnalyzer:
         return shortest_doc
     
       
-store=JSONLStore("data/raw/documents.jsonl")
-documents=store.read_all()  
-obj=DatasetAnalyzer(documents=documents)
+# store=JSONLStore("data/raw/documents.jsonl")
+# documents=store.read_all()  
+# obj=DatasetAnalyzer(documents=documents)
 
-total_doc=obj.total_documents()
-print(total_doc)
+# total_doc=obj.total_documents()
+# print(total_doc)
 
-total_word=obj.total_words()
-print(total_word)
+# total_word=obj.total_words()
+# print(total_word)
 
-avg=obj.average_word_count()
-print(avg)
+# avg=obj.average_word_count()
+# print(avg)
 
-longest_doc=obj.longest_document()
-print(longest_doc.title)
+# longest_doc=obj.longest_document()
+# print(longest_doc.title)
 
-shortest_doc=obj.shortest_document()
-print(shortest_doc.title)
+# shortest_doc=obj.shortest_document()
+# print(shortest_doc.title)

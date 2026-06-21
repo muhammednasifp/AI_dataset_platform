@@ -14,33 +14,58 @@ class ContentQualityAnalyzer:
 
         for document in self.documents:
 
-            if document.metadata["word_count"]<threshold:
+            if document.metadata["word_count"]<=threshold:
                 short_docs.append(document)
         return short_docs
 
-    def long_documents(self,thresold=500):
+    def long_documents(self,threshold=500):
 
         long_docs=[]
 
         for document in self.documents:
-            if document.metadata["word_count"]>=thresold:
+            if document.metadata["word_count"]>=threshold:
                 long_docs.append(document)
 
         return long_docs
 
-    def noisy_documents(self):
-        pass    
+    def noisy_documents(self,threshold=3):
 
+        noise_doc=[]
+        noise_keywords = [
+            "company",
+            "support",
+            "resources",
+            "languages",
+            "blog"
+        ]   
+        
+        for document in self.documents:
+            count=0
+            content=document.content.lower()
 
-store=JSONLStore("data/raw/documents.jsonl")
+            for keyword in noise_keywords:
+                if keyword in content:
+                    count+=1
 
-docs=store.read_all()
+            if count>=threshold:
+                noise_doc.append(document)
+            
 
-obj=ContentQualityAnalyzer(docs)
+        return noise_doc
 
-print(obj.short_documents())
+# store=JSONLStore("data/raw/documents.jsonl")
 
-long_doc=obj.long_documents()
+# docs=store.read_all()
 
-print(long_doc[0].metadata["word_count"])
-print(long_doc[1].metadata["word_count"])
+# obj=ContentQualityAnalyzer(docs)
+
+# print(obj.short_documents())
+
+# long_doc=obj.long_documents()
+
+# print(long_doc[0].metadata["word_count"])
+# print(long_doc[1].metadata["word_count"])
+
+# noise_doc=obj.noisy_documents()
+
+# print(len(noise_doc))

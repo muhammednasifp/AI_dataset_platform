@@ -34,5 +34,5 @@ urls=[
 #     else:
 #         print('error page',doc.title)
         
-documents=store.read_all()
-print(documents[0].metadata)
+# documents=store.read_all()
+# print(documents[0].metadata)
