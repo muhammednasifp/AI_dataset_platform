@@ -18,21 +18,22 @@ urls=[
     "https://coddy.tech/docs/python/input-and-print"   
 ]
 
-# for url in urls:
+for url in urls:
 
-#     doc=collector.collect(url)
+    doc=collector.collect(url)
     
-#     if doc:
-#         doc=cleaner.clean(doc)
+    if doc:
+        doc=cleaner.clean(doc)
 
-#     if validator.validate(doc): 
+    if validator.validate(doc): 
 
-#         doc=enricher_obj.enricher(doc)
-#         store.save_one(doc)
-#         print("saved:",doc.title)
+        doc=enricher_obj.enricher(doc)
+        store.save_one(doc)
+        print("saved:",doc.title)
        
-#     else:
-#         print('error page',doc.title)
-        
-# documents=store.read_all()
-# print(documents[0].metadata)
+    else:
+        print('error page',doc.title)
+
+
+documents=store.read_all()
+print(documents[0].metadata)

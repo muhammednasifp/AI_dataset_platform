@@ -5,15 +5,16 @@ from src.models.document import Document
 
 class JSONLStore:
     
-    def __init__(self,path):
+    def __init__(self,path,model_class):
 
         self.path=path
+        self.model_class = model_class
         directory = os.path.dirname(path)
 
         os.makedirs(
-        directory,
-        exist_ok=True
-    )
+            directory,
+            exist_ok=True
+        )
     
     def save_one(self,document): 
         data=asdict(document)
@@ -41,7 +42,8 @@ class JSONLStore:
         with open(self.path,"r") as file:
             for line in file:
                 data=json.loads(line)
-                doc=Document(**data)
+
+                doc=self.model_class(**data)
                 documents.append(doc)      
         return documents
 

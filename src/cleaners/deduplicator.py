@@ -31,6 +31,8 @@ class Deduplicator:
 
         return unique_docs
 
+    def create_version_from_store(self):
+        pass
 
 store=JSONLStore("data/raw/documents.jsonl")
 documents=store.read_all()

@@ -1,5 +1,6 @@
 from src.analytics.dataset_analyzer import DatasetAnalyzer
 from src.storage.jsonl_store import JSONLStore
+from src.analytics.quality_scorer import QualityScorer
 # Reporting
 # Convert analytics results into a human-readable summary.
 #
@@ -7,8 +8,10 @@ from src.storage.jsonl_store import JSONLStore
 # and size without inspecting raw data.
 class DatasetReport:
 
-    def __init__(self,analyzer):
+    def __init__(self,analyzer,scorer):
         self.analyzer=analyzer
+        self.scorer=scorer
+    
     
     def generate(self):
 
@@ -17,6 +20,9 @@ class DatasetReport:
         average_words=self.analyzer.average_word_count()
         longest_doc=self.analyzer.longest_document()
         shortest_doc=self.analyzer.shortest_document()
+        average_score=self.scorer.average_score()
+        high_quality_doc=self.scorer.highest_quality()
+        low_quality_doc=self.scorer.lowest_quality()
 
         report=f"""
         ========== DATASET REPORT ==========
@@ -33,6 +39,20 @@ class DatasetReport:
         {shortest_doc.title}
 
         ====================================
+
+        Average Score:
+        {average_score}
+
+        Highest Quality:
+        {high_quality_doc["document"]}
+        Score:
+        {high_quality_doc["quality_score"]}
+
+        Lowest Quality:
+        {low_quality_doc["document"]}
+        Score:
+        {low_quality_doc["quality_score"]}
+
         """
         # round(value, digits)
         # Rounds a floating-point number to a fixed
@@ -41,12 +61,13 @@ class DatasetReport:
         # Example:
         # round(473.2333, 2)
         # -> 473.23
+
         return report
 
-# store=JSONLStore("data/raw/documents.jsonl")
-# documents=store.read_all()
-# analyzer=DatasetAnalyzer(documents=documents)
+store=JSONLStore("data/raw/documents.jsonl")
+documents=store.read_all()
+analyzer=DatasetAnalyzer(documents=documents)
+scorer=QualityScorer(documents=documents)
+report_obj=DatasetReport(analyzer=analyzer,scorer=scorer)
 
-# report_obj=DatasetReport(analyzer=analyzer)
-
-# print(report_obj.generate())
+print(report_obj.generate())

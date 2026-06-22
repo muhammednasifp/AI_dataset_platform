@@ -7,58 +7,84 @@ from src.storage.jsonl_store import JSONLStore
 
 class QualityScorer:
 
-    def score_document(self,document):
+    def __init__(self,document=None,documents=None):
+        self.document=document
+        self.documents=documents
 
+    def score_document(self):
         final_score=dict()
         reasons=[]
 
         score = 0
 
-        if document.metadata["word_count"] > 500:
+        if self.document.metadata["word_count"] > 500:
             score += 50
             reasons.append("Word count above 500")
 
-        if document.title:
+        if self.document.title:
             score += 25
             reasons.append("title exist")
 
-        if  document.url:
+        if  self.document.url:
             score += 25
             reasons.append("url exist")
 
         final_score["score"]=score
-        final_score["reason"]=reasons
+        final_score["reasons"]=reasons
 
         return final_score
     
-    def rank_document(self,documents):
+    def rank_document(self):
 
         rankings=[]
 
-        for doc in docs:
-           score_info=self.score_document(doc)
+        for doc in self.documents:
+           score=doc.metadata["quality_score"]
 
            record={}
-           record["docuemnt"]=doc
-           record["score"]=score_info["score"]
+           record["document"]=doc
+           record["quality_score"]=score
 
            rankings.append(record)
         
-        print(sorted(rankings,key=lambda item:item["score"],reverse=True))
+        return sorted(rankings,key=lambda item:item["quality_score"],reverse=True)
+    
+    def average_score(self):
 
+        total=0
+        for doc in self.documents:
 
-store=JSONLStore("data/raw/documents.jsonl")
+            total+=doc.metadata["quality_score"]
+        
+        return total/len(self.documents)
 
-docs=store.read_all()
+    def highest_quality(self):
 
-obj=QualityScorer()
+        ranked=self.rank_document()
 
-obj.rank_document(docs)
+        return ranked[0]
+    
+    def lowest_quality(self):
+        ranked=self.rank_document()
 
-# for doc in docs:
+        return ranked[-1]
 
-#     obj=QualityScorer(doc)
-#     obj.rank_document()
+    def filter_high_quality(self):
+        
+        filterd_docs=[]
+        ranked=self.rank_document()
+
+        for item in ranked:
+
+            if item["quality_score"]>=80:
+                
+                filterd_docs.append(item)
+
+        return filterd_docs
+
+# store=JSONLStore("data/raw/documents.jsonl")
+
+# docs=store.read_all()
 
 
         

@@ -8,6 +8,7 @@ class DatasetAnalyzer:
         self.documents=documents
 
     def total_documents(self):
+        
         return len(self.documents)
     
     def total_words(self):
