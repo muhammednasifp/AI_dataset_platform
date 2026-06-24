@@ -32,6 +32,7 @@ from src.models.embedding import Embedding
 from sentence_transformers import SentenceTransformer
 from src.storage.jsonl_store import JSONLStore
 from src.models.chunk import Chunk
+
 class EmbeddingGenerator:
 
     def __init__(self):
@@ -52,21 +53,27 @@ class EmbeddingGenerator:
             chunk_id=chunk.id,
             vector=self.model.encode(chunk.content).tolist()
         )
+    
+    def query_embed_generator(self,query):
 
-chunk_store=JSONLStore("data/processed/chunks.jsonl",model_class=Chunk)
-chunks = chunk_store.read_all()
+        vector=self.model.encode(query).tolist()
+        
+        return vector
 
-embedding_store=JSONLStore("data/processed/embeddings.jsonl",model_class=Embedding)
-# generator=EmbeddingGenerator()
-# for chunk in chunks:
-#     embedding = generator.generate(chunk)
-#     embedding_store.save_one(embedding)
+# chunk_store=JSONLStore("data/processed/chunks.jsonl",model_class=Chunk)
+# chunks = chunk_store.read_all()
 
-embeddings = embedding_store.read_all()
+# embedding_store=JSONLStore("data/processed/embeddings.jsonl",model_class=Embedding)
+# # generator=EmbeddingGenerator()
+# # for chunk in chunks:
+# #     embedding = generator.generate(chunk)
+# #     embedding_store.save_one(embedding)
 
-print(len(embeddings))
-print(embeddings[0].chunk_id)
-print(len(embeddings[0].vector))
+# embeddings = embedding_store.read_all()
+
+# # print(len(embeddings))
+# # print(embeddings[0].chunk_id)
+# # print(len(embeddings[0].vector))
 
 
 
