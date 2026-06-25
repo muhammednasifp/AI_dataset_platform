@@ -46,7 +46,7 @@ class QualityScorer:
            record["quality_score"]=score
 
            rankings.append(record)
-        
+            
         return sorted(rankings,key=lambda item:item["quality_score"],reverse=True)
     
     def average_score(self):

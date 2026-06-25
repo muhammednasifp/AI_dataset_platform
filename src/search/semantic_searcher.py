@@ -9,7 +9,8 @@ from src.models.chunk import Chunk
 from src.embedders.embedding_generator import EmbeddingGenerator
 from src.storage.jsonl_store import JSONLStore
 from src.utils.similarity import cosine_similarity
-
+from src.rag.context_builder import ContextBuilder
+from src.rag.prompt_builder import PromptBuilder
 class SemanticSearcher:
     
     def __init__(self,embedder,embedding_store,chunk_store):
@@ -20,49 +21,67 @@ class SemanticSearcher:
 
     def search(self,question):
 
-
         query_vector=self.embedder.query_embed_generator(question)
 
         embeddings=self.embedding_store.read_all()
 
-        best_score=-1
-        best_chunk_id=None
+        results=[]
         similarity=0
         for embedding in embeddings:
-
+            
+            record={}
             similarity=cosine_similarity(
                 query_vector,
                 embedding.vector
             )
 
-            if similarity>best_score:
-                best_score=similarity
-                best_chunk_id=embedding.chunk_id
+            record["chunk"]=embedding.chunk_id
+            record["score"]=similarity
+
+            results.append(record)
         
+        
+        ranked=sorted(
+            results,
+            key=lambda item:item["score"],
+            reverse=True
+        )
+
+        top_results=ranked[:3]
+
         chunks=self.chunk_store.read_all()
+        list_chunk=[]
+        for result in top_results:
+            for chunk in chunks:
+                if result["chunk"]==chunk.id:
+                    list_chunk.append(chunk)
 
-        chunk_content=''
-        for chunk in chunks:
-            if best_chunk_id==chunk.id:
-                chunk_content=chunk.content
-                break
-    
         
-        return chunk
-    
-embedder=EmbeddingGenerator()
-embedding_store=JSONLStore("data/processed/embeddings.jsonl",model_class=Embedding)
-chunk_store=JSONLStore("data/processed/chunks.jsonl",model_class=Chunk)
+        return list_chunk
 
-search=SemanticSearcher(
-            embedder=embedder,
-            embedding_store=embedding_store,
-            chunk_store=chunk_store
-            )
+                
+# embedder=EmbeddingGenerator()
+# embedding_store=JSONLStore(
+#     "data/processed/embeddings.jsonl",
+#     model_class=Embedding
+# )
+# chunk_store=JSONLStore("data/processed/chunks.jsonl",model_class=Chunk)
+# context_builder=ContextBuilder()
+# prompt_builder=PromptBuilder()
+# searcher=SemanticSearcher(
+#         embedder=embedder,
+#         embedding_store=embedding_store,
+#         chunk_store=chunk_store
+# )
 
-search.search("what is python")
+# question="what is python"
+# results = searcher.search(
+#     question=question
+# )
 
 
+# context=context_builder.build(results)
+# prompt=prompt_builder.build(context=context,question=question)
                 
         
     
