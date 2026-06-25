@@ -1,3 +1,25 @@
+# -----------------------------------------------------------------------------
+# JSONLStore
+#
+# Provides a generic storage interface for reading and writing dataclass
+# objects in JSON Lines (JSONL) format.
+#
+# Responsibilities:
+# - Persist individual or multiple objects as JSONL records.
+# - Read stored records back into dataclass instances.
+# - Count stored records.
+# - Replace the entire dataset with a new collection of objects.
+#
+# Design Notes:
+# - Generic storage component that works with any dataclass model.
+# - Uses dependency injection to reconstruct objects via the supplied
+#   model_class.
+# - Stores one JSON object per line for efficient streaming and incremental
+#   updates.
+# - Separates persistence logic from business logic, allowing the same
+#   storage implementation to be reused across Documents, Chunks,
+#   Embeddings, and future models.
+# -----------------------------------------------------------------------------
 import json
 import os
 from dataclasses import asdict

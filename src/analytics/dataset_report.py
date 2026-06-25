@@ -1,11 +1,11 @@
-from src.analytics.dataset_analyzer import DatasetAnalyzer
-from src.storage.jsonl_store import JSONLStore
-from src.analytics.quality_scorer import QualityScorer
 # Reporting
 # Convert analytics results into a human-readable summary.
 #
 # Reports help quickly understand dataset quality
 # and size without inspecting raw data.
+from src.analytics.dataset_analyzer import DatasetAnalyzer
+from src.storage.jsonl_store import JSONLStore
+from src.analytics.quality_scorer import QualityScorer
 class DatasetReport:
 
     def __init__(self,analyzer,scorer):

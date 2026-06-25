@@ -1,4 +1,27 @@
-
+# -----------------------------------------------------------------------------
+# DatasetAnalyzer
+#
+# Computes high-level statistics about a collection of documents.
+#
+# This class provides descriptive metrics that help understand the size,
+# structure, and distribution of a dataset before it is used in downstream
+# AI tasks such as quality analysis, embedding generation, or RAG.
+#
+# Available metrics include:
+# - Total number of documents.
+# - Total number of words.
+# - Average words per document.
+# - Longest document.
+# - Shortest document.
+#
+# Design Notes:
+# - Operates on an in-memory list of Document objects.
+# - Read-only component; it never modifies the dataset.
+# - Focuses solely on dataset analytics, following the Single Responsibility
+#   Principle (SRP).
+# - Can be extended with additional statistics such as median word count,
+#   vocabulary size, or document length distribution.
+# -----------------------------------------------------------------------------
 from src.storage.jsonl_store import JSONLStore
 
 class DatasetAnalyzer:

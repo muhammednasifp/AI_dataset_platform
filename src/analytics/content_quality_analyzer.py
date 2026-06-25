@@ -1,3 +1,24 @@
+# -----------------------------------------------------------------------------
+# ContentQualityAnalyzer
+#
+# Analyzes dataset quality by identifying documents that may require review.
+#
+# This class performs simple rule-based quality checks such as:
+# - Detecting unusually short documents.
+# - Detecting unusually long documents.
+# - Detecting documents containing common "noise" keywords.
+#
+# These checks help evaluate the overall quality of a dataset before it is
+# used for downstream AI tasks such as embedding generation, semantic search,
+# or Retrieval-Augmented Generation (RAG).
+#
+# Design Notes:
+# - Operates on an in-memory list of Document objects.
+# - Uses configurable thresholds to support different datasets.
+# - Does not modify documents; it only identifies and returns matching ones.
+# - Intended as a lightweight quality analysis component within the analytics
+#   layer of the dataset pipeline.
+# -----------------------------------------------------------------------------
 from src.storage.jsonl_store import JSONLStore
 
 class ContentQualityAnalyzer:

@@ -1,3 +1,21 @@
+# -----------------------------------------------------------------------------
+# DocumentConverter
+#
+# Converts a collection of Document objects into a pandas DataFrame for
+# analytics, reporting, and data processing.
+#
+# Responsibilities:
+# - Convert Document dataclass instances into dictionaries.
+# - Extract useful metadata into top-level DataFrame columns.
+# - Produce a tabular representation suitable for analysis with pandas.
+#
+# Design Notes:
+# - Acts as a bridge between the application's object model and the pandas
+#   ecosystem.
+# - Keeps data conversion separate from analytics and storage.
+# - Can be extended to flatten additional metadata fields or export to
+#   formats such as CSV or Parquet.
+# -----------------------------------------------------------------------------
 from dataclasses import asdict
 import pandas as pandas_obj
 

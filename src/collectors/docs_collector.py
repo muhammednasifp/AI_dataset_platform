@@ -1,3 +1,23 @@
+# -----------------------------------------------------------------------------
+# DocsCollector
+#
+# Collects documents from web pages and converts them into structured Document
+# objects for the dataset pipeline.
+#
+# Responsibilities:
+# - Downloads HTML content from a given URL.
+# - Extracts the page title.
+# - Extracts paragraph text as the main document content.
+# - Assigns a unique identifier to each document.
+# - Creates a standardized Document object for downstream processing.
+#
+# Design Notes:
+# - Acts as the data ingestion layer of the pipeline.
+# - Keeps web scraping separate from validation, cleaning, and storage.
+# - Returns a Document object on success or None if the request fails.
+# - Can be extended to support multiple websites, content extraction rules,
+#   retries, request timeouts, and metadata collection.
+# -----------------------------------------------------------------------------
 import requests
 import uuid
 from bs4 import BeautifulSoup

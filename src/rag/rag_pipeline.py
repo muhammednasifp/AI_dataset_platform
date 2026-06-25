@@ -1,3 +1,22 @@
+# -----------------------------------------------------------------------------
+# RAGPipeline
+#
+# Orchestrates the end-to-end Retrieval-Augmented Generation (RAG) workflow.
+#
+# Pipeline Flow:
+# 1. Retrieve the most relevant chunks using semantic search.
+# 2. Build a context from the retrieved chunks.
+# 3. Construct a prompt using the user question and retrieved context.
+# 4. Generate an answer using the language model.
+#
+# Design Notes:
+# - Acts as the orchestration layer for the RAG system.
+# - Coordinates independent components without implementing their internal
+#   logic.
+# - Uses dependency injection to remain modular and easily testable.
+# - Can be extended with reranking, caching, conversation memory,
+#   citations, and multiple retrieval strategies.
+# -----------------------------------------------------------------------------
 from src.models.chunk import Chunk
 from src.models.embedding import Embedding
 from src.embedders.embedding_generator import EmbeddingGenerator
