@@ -34,10 +34,10 @@ class Deduplicator:
     def create_version_from_store(self):
         pass
 
-store=JSONLStore("data/raw/documents.jsonl")
-documents=store.read_all()
+# store=JSONLStore("data/raw/documents.jsonl")
+# documents=store.read_all()
 
-obj=Deduplicator(documents=documents)
-docs=obj.remove_duplicates()
+# obj=Deduplicator(documents=documents)
+# docs=obj.remove_duplicates()
 
-store.replace_all(docs)
+# store.replace_all(docs)

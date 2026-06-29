@@ -62,16 +62,15 @@ class EmbeddingGenerator:
 
 # chunk_store=JSONLStore("data/processed/chunks.jsonl",model_class=Chunk)
 # chunks = chunk_store.read_all()
-
-# embedding_store=JSONLStore("data/processed/embeddings.jsonl",model_class=Embedding)
-# # generator=EmbeddingGenerator()
-# # for chunk in chunks:
-# #     embedding = generator.generate(chunk)
-# #     embedding_store.save_one(embedding)
+# config=Config()
+# embedding_store=JSONLStore(config.embedding_path,model_class=Embedding)
+# generator=EmbeddingGenerator(config.embedding_model)
+#  # for chunk in chunks:
+#  #     embedding = generator.generate(chunk)
+#  #     embedding_store.save_one(embedding)
 
 # embeddings = embedding_store.read_all()
-
-# # print(len(embeddings))
+# print(len(embeddings))
 # # print(embeddings[0].chunk_id)
 # # print(len(embeddings[0].vector))
 

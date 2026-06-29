@@ -23,7 +23,7 @@
 import json
 import os
 from dataclasses import asdict
-from src.models.document import Document
+
 
 class JSONLStore:
     
