@@ -42,7 +42,7 @@ class QualityScorer:
            score=doc.metadata["quality_score"]
 
            record={}
-           record["document"]=doc
+           record["document"]=doc.title
            record["quality_score"]=score
 
            rankings.append(record)
@@ -65,6 +65,7 @@ class QualityScorer:
         return ranked[0]
     
     def lowest_quality(self):
+
         ranked=self.rank_document()
 
         return ranked[-1]

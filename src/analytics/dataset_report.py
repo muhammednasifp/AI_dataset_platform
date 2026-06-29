@@ -64,10 +64,10 @@ class DatasetReport:
 
         return report
 
-store=JSONLStore("data/raw/documents.jsonl")
-documents=store.read_all()
-analyzer=DatasetAnalyzer(documents=documents)
-scorer=QualityScorer(documents=documents)
-report_obj=DatasetReport(analyzer=analyzer,scorer=scorer)
+# store=JSONLStore("data/raw/documents.jsonl")
+# documents=store.read_all()
+# analyzer=DatasetAnalyzer(documents=documents)
+# scorer=QualityScorer(documents=documents)
+# report_obj=DatasetReport(analyzer=analyzer,scorer=scorer)
 
-print(report_obj.generate())
+# print(report_obj.generate())

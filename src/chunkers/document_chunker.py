@@ -10,7 +10,7 @@ from src.models.chunk import Chunk
 from src.storage.jsonl_store import  JSONLStore
 class Chunker:
     
-    def __init__(self,chunk_size=200):
+    def __init__(self,chunk_size):
         
         self.chunk_size=chunk_size
 

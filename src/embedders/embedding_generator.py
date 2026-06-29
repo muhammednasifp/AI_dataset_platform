@@ -35,8 +35,8 @@ from src.models.chunk import Chunk
 
 class EmbeddingGenerator:
 
-    def __init__(self):
-       self.model=SentenceTransformer("all-MiniLM-L6-v2")
+    def __init__(self,embedding_model):
+       self.model=SentenceTransformer(embedding_model)
 
     def generate(self, chunk):
         # generate()

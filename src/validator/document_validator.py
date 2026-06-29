@@ -19,7 +19,7 @@
 
 class DocumentValidator:
 
-    def validate(self, document):
+    def validate(self, document,threshold):
 
         if not document.title: #here 'not' catches both None and empty tring("")
             return False
@@ -27,7 +27,7 @@ class DocumentValidator:
         if not document.content:
             return False
 
-        if len(document.content) < 100:
+        if len(document.content) < 100 :
             return False
 
         return True

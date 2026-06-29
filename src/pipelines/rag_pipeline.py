@@ -46,35 +46,36 @@ class RAGPipeline:
 
         return result
 
-question=input("prompt:")
-embedder=EmbeddingGenerator()
-embedding_store=JSONLStore(
-        "data/processed/embeddings.jsonl",
-        model_class=Embedding
-)
-chunk_store=JSONLStore(
-        "data/processed/chunks.jsonl",
-        model_class=Chunk
-)
-context_builder=ContextBuilder()
-prompt_builder=PromptBuilder()
-searcher=SemanticSearcher(
-        embedder=embedder,
-        embedding_store=embedding_store,
-        chunk_store=chunk_store
-)
-generator=Generator()
+# question=input("prompt:")
+# embedder=EmbeddingGenerator()
+# embedding_store=JSONLStore(
+#         "data/processed/embeddings.jsonl",
+#         model_class=Embedding
+# )
+# chunk_store=JSONLStore(
+#         "data/processed/chunks.jsonl",
+#         model_class=Chunk
+# )
+# context_builder=ContextBuilder()
+# prompt_builder=PromptBuilder()
+# searcher=SemanticSearcher(
+#         embedder=embedder,
+#         embedding_store=embedding_store,
+#         chunk_store=chunk_store
+# )
+# generator=Generator()
 
-rag_obj=RAGPipeline(
-        searcher=searcher,
-        generator=generator,
-        context_builder=context_builder,
-        prompt_builder=prompt_builder
-)
+# rag_obj=RAGPipeline(
+#         searcher=searcher,
+#         generator=generator,
+#         context_builder=context_builder,
+#         prompt_builder=prompt_builder
+# )
 
 
-answer=rag_obj.ask(question=question)
+# answer=rag_obj.ask(question=question)
 
-print("Answer:\n")
-print(answer)
+# print("\n")
+# print("Answer:\n")
+# print(answer)
 
