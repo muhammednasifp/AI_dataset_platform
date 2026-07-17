@@ -68,7 +68,6 @@ def setpup_logging():
     #Set Format
     os.makedirs("logs", exist_ok=True)
     file_handler=logging.FileHandler("logs/app.log")
-
     # FileHandler writes log messages to a file.
     #
     # The log file can be created automatically,
@@ -83,10 +82,20 @@ def setpup_logging():
     #
     # Handlers are attached using:
     #
-    #     logger.addHandler(handler)
+    #logger.addHandler(handler)
     #
     # A logger decides which messages should be processed,
     # while handlers decide where those messages are written..
+    # Logging Rule:
+    #
+    # Log meaningful application events,
+    # not every function call or computation.
+    #
+    # Good:
+    #   "Generated 245 embeddings."
+    #
+    # Bad:
+    #   "Current vector = [0.23, ...]"
 
 
 
