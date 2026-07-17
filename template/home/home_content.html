@@ -1,0 +1,101 @@
+<section class="hero">
+  <div class="container">
+    <span class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.09 6.26L20 10l-5.91 1.74L12 18l-2.09-6.26L4 10l5.91-1.74L12 2z"></path></svg>
+      Retrieval-Augmented Generation
+    </span>
+    <h1>AI Knowledge Platform</h1>
+    <p class="lead">
+      Build datasets from online documentation and ask questions using
+      Retrieval-Augmented Generation (RAG).
+    </p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="{% url 'build_dataset' %}" class="btn btn-primary-custom">
+        <svg class="me-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><line x1="12" y1="11" x2="12" y2="17"></line><line x1="9" y1="14" x2="15" y2="14"></line></svg>
+        Build Dataset
+      </a>
+      <a href="{% url 'chat_bot' %}" class="btn btn-outline-custom">
+        <svg class="me-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Ask Questions
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OVERVIEW CARDS ============ -->
+<!-- <section class="overview-section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="bi bi-file-earmark-text"></i></div>
+          <div class="stat-value">{{ total_documents|default:"42" }}</div>
+          <div class="stat-label">Total Documents</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="bi bi-grid-3x3-gap"></i></div>
+          <div class="stat-value">{{ total_chunks|default:"631" }}</div>
+          <div class="stat-label">Total Chunks</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="bi bi-diagram-3"></i></div>
+          <div class="stat-value">{{ total_embeddings|default:"631" }}</div>
+          <div class="stat-label">Embeddings Generated</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="bi bi-tag"></i></div>
+          <div class="stat-value">{{ dataset_version|default:"v1.0" }}</div>
+          <div class="stat-label">Dataset Version</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<!--<section class="features-section">
+  <div class="container">
+    <span class="section-eyebrow">Capabilities</span>
+    <h2 class="section-title">What you can do</h2>
+    <p class="section-subtitle mb-4">
+      Everything needed to turn scattered documentation into a searchable, queryable knowledge base.
+    </p>
+
+    <div class="row g-4 mt-1">
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-cloud-arrow-down"></i></div>
+          <div class="feature-title">Dataset Collection</div>
+          <p class="feature-text">Collect documentation from URLs and organize it into structured datasets.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-search"></i></div>
+          <div class="feature-title">Semantic Search</div>
+          <p class="feature-text">Search across your documents using vector embeddings for meaning, not just keywords.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-robot"></i></div>
+          <div class="feature-title">AI Question Answering</div>
+          <p class="feature-text">Ask questions and get grounded answers using a local LLM.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-bar-chart"></i></div>
+          <div class="feature-title">Analytics</div>
+          <p class="feature-text">View dataset statistics and quality reports at a glance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->

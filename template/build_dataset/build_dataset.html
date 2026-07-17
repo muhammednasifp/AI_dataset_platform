@@ -1,0 +1,18 @@
+{% extends 'home/blank_layout.html'%}
+{% load static %}
+
+{% block content_style %}
+    <link rel="stylesheet" href="{% static 'style/build_style.css'%}">
+{%endblock content_style %}
+
+{% block nav_content %}
+    {% include 'home/navbar.html' %}
+{%endblock nav_content %}
+
+{% block content %}
+    {%include 'build_dataset/build_dataset_content.html'%}
+{%endblock content %}
+
+{% block footer_content %}
+    {%include 'home/footer.html' %}
+{% endblock footer_content %}

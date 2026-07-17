@@ -1,0 +1,81 @@
+<!-- ============ MAIN CONTENT ============ -->
+<main class="container main-content">
+
+  <!-- ---------- Dataset Source Card ---------- -->
+<form action="">
+  <section class="card">
+    <label class="field-label" for="doc-urls">Documentation URLs</label>
+    <textarea
+      id="doc-urls"
+      name="doc_urls"
+      class="url-textarea"
+      rows="6"
+      placeholder="https://docs.python.org
+      https://fastapi.tiangolo.com
+      https://docs.djangoproject.com"></textarea>
+    <p class="helper-text">Enter one documentation URL per line.</p>
+  </section>
+
+  <!-- ---------- Dataset Settings Card ---------- -->
+  <section class="card">
+    <h2 class="card-title">Dataset Settings</h2>
+    <div class="settings-grid">
+      <div class="field-group">
+        <label class="field-label" for="chunk-size">Chunk Size</label>
+        <input type="number" id="chunk-size" name="chunk_size" class="text-input" value="200">
+      </div>
+      <div class="field-group">
+        <label class="field-label" for="top-k">Top K Retrieval</label>
+        <input type="number" id="top-k" name="top_k" class="text-input" value="5">
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Build Button ---------- -->
+  <div class="build-button-wrapper">
+    <button type="submit" class="build-button">Build Dataset</button>
+  </div>
+</form>
+  <!-- ---------- Progress Section ---------- -->
+  <!-- <section class="card status-card">
+    <h2 class="card-title">Status</h2>
+    <p class="status-text">Ready to build dataset.</p> -->
+
+    <!--
+      Django can update this area dynamically with progress messages such as:
+      Collecting documents...
+      Cleaning documents...
+      Validating...
+      Chunking...
+      Generating embeddings...
+      Saving dataset...
+      Completed successfully.
+    -->
+   <!-- <div class="status-log">
+    </div>
+  </section> -->
+
+  <!-- ---------- Dataset Summary Card ---------- -->
+  <!-- <section class="summary-section">
+    <h2 class="section-title">Dataset Summary</h2>
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-value">{{ total_documents|default:"0" }}</div>
+        <div class="summary-label">Documents</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-value">{{ total_chunks|default:"0" }}</div>
+        <div class="summary-label">Chunks</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-value">{{ total_embeddings|default:"0" }}</div>
+        <div class="summary-label">Embeddings</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-value">{{ dataset_version|default:"v1.0" }}</div>
+        <div class="summary-label">Dataset Version</div>
+      </div>
+    </div>
+  </section>
+
+</main> -->

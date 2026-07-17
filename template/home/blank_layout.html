@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Knowledge Platform</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{% static 'style/base.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'style/navbar_style.css' %}">
+    <link rel="stylesheet" href="{% static 'style/footer_style.css' %}">
+    {%block content_style%}
+    
+    {%endblock content_style %}
+</head>
+<body>     
+    {% block nav_content %}
+
+    {%endblock nav_content %}
+
+    {% block content %}
+
+    {%endblock content %}
+
+    {% block footer_content %}
+
+    {% endblock footer_content %}
+    
+</body>
+</html>

@@ -18,5 +18,7 @@ Including another URLconf
 from django.urls import path
 from . import views
 urlpatterns = [
-    path('home/',views.home,name='home')
+    path('',views.home,name='home'),
+    path('build_dataset/',views.build_dataset,name='build_dataset'),
+    path('chat_bot/',views.chat_bot,name='chat_bot')
 ]
