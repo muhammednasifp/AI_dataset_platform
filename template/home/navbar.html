@@ -14,7 +14,7 @@
     </label>
 
     <ul class="nav-menu">
-      <li><a class="nav-link {% if request.path == '' %}active{% endif %}"
+      <li><a class="nav-link {% if request.path == '/' %}active{% endif %}"
               href="{% url 'home' %}">Home</a></li>
       <li><a class="nav-link {% if request.path == '/build_dataset/' %}active{% endif %}"
               href="{% url 'build_dataset' %}">Build Dataset</a></li>

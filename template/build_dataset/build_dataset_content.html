@@ -2,7 +2,8 @@
 <main class="container main-content">
 
   <!-- ---------- Dataset Source Card ---------- -->
-<form action="">
+<form method="post">
+  {% csrf_token %}
   <section class="card">
     <label class="field-label" for="doc-urls">Documentation URLs</label>
     <textarea
@@ -36,6 +37,12 @@
     <button type="submit" class="build-button">Build Dataset</button>
   </div>
 </form>
+  {% if success %}
+    <p>{{message}}</p>
+  {%else%}
+    <p>{{error}}</p>
+  {% endif %}
+
   <!-- ---------- Progress Section ---------- -->
   <!-- <section class="card status-card">
     <h2 class="card-title">Status</h2>

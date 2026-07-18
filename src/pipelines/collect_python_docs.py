@@ -22,7 +22,7 @@ from src.storage.jsonl_store import JSONLStore
 from src.validator.document_validator import DocumentValidator
 from src.cleaners.document_cleaner import DocumentCleaner
 from src.enrichers.document_enricher import DocumentEnricher
-
+from src.models.document import Document
 class DatasetPipeline:
 
     def __init__(self,config):
@@ -30,7 +30,7 @@ class DatasetPipeline:
     
     def Dataset(self,urls):
         collector=DocsCollector()
-        store=JSONLStore(self.config.jsonl_path)
+        store=JSONLStore(self.config.jsonl_path,model_class=Document)
         validator=DocumentValidator()
         cleaner=DocumentCleaner()
         enricher_obj=DocumentEnricher()
@@ -42,7 +42,7 @@ class DatasetPipeline:
             if doc:
                 doc=cleaner.clean(doc)
 
-            if validator.validate(doc): 
+            if validator.validate(doc,threshold=self.config.validation_threshold): 
 
                 doc=enricher_obj.enricher(doc)
                 store.save_one(doc)
