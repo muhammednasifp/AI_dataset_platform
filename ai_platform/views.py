@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 # from src.factories.rag_factory import RAGFactory
 # from src.config import Config
@@ -41,6 +41,19 @@ def analytics(request):
 
     context=AnalyticsService.get_statics()
 
-    print(context["low_quality_doc_count"])
-    
     return render(request,'analytics/analytics.html',context)
+
+def download_report(request):
+
+    report=AnalyticsService.get_report()
+
+    response = HttpResponse(
+        report,
+        content_type="text/plain"
+    )
+
+    response["Content-Disposition"] = 'attachment; filename="dataset_report.txt"'
+
+    return response
+
+
