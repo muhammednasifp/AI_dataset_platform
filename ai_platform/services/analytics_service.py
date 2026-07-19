@@ -14,6 +14,15 @@ class AnalyticsService:
 
         return report_obj.generate_data()
     
+    @staticmethod
+    def get_report():
+        config=Config()
+
+        pipeline_obj=AnalyticsPipeline(config=config)
+
+        report_obj=pipeline_obj.build_report()
+
+        return  report_obj.generate_text()
 
 
 

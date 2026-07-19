@@ -59,12 +59,10 @@ class DatasetReport:
             Average Quality Score : {round(report_dict["average_score"], 2)}
 
             Highest Quality Document
-            Title : {report_dict["high_quality_doc"]["document"]}
-            Score : {report_dict["high_quality_doc"]["quality_score"]}
+            Score : {report_dict["high_quality_doc"]}
 
             Lowest Quality Document
-            Title : {report_dict["low_quality_doc"]["document"]}
-            Score : {report_dict["low_quality_doc"]["quality_score"]}
+            Score : {report_dict["low_quality_doc"]}
 
             ===================================
 
@@ -72,7 +70,7 @@ class DatasetReport:
             --------------------
             High Quality Documents   : {report_dict["high_quality_doc_count"]}
             Medium Quality Documents : {report_dict["medium_quality_count"]}
-            Low Quality Documents    : {report_dict["low_qulity_doc_count"]}
+            Low Quality Documents    : {report_dict["low_quality_doc_count"]}
 
             Long Documents           : {report_dict["long_docs_count"]}
             Short Documents          : {report_dict["short_docs_count"]}
