@@ -1,0 +1,90 @@
+<section class="hero">
+  <div class="container">
+    <h1>Ask Questions</h1>
+    <p class="lead">Ask questions about your generated knowledge base using Retrieval-Augmented Generation (RAG).</p>
+  </div>
+</section>
+
+<!-- ============ MAIN CONTENT ============ -->
+<main class="container main-content">
+
+  <!-- ---------- Question Card ---------- -->
+   <form method="post">
+    {% csrf_token %}
+  <section class="card">
+    <label class="field-label" for="user-question">Your Question</label>
+    <textarea
+      id="user-question"
+      name="question"
+      class="question-textarea"
+      rows="5"
+      placeholder="question">{{question|default:'' }}</textarea>
+    <p class="helper-text">Ask questions related to the generated dataset.</p>
+  </section>
+
+  <!-- ---------- Ask Button ---------- -->
+  <div class="ask-button-wrapper">
+    <button type="submit" class="ask-button">Ask Question</button>
+  </div>
+
+  </form>
+  <!-- ---------- Answer Card ---------- -->
+  <section class="card answer-card">
+    <h2 class="card-title">Answer</h2>
+    <div class="answer-body">
+      {%if success%}
+        {{answer}}
+      {% else %}
+        {{error}}
+      {% endif %}
+     
+    </div>
+  </section>
+
+  <!-- ---------- Retrieved Sources Card ---------- -->
+  <!-- <section class="card">
+    <h2 class="card-title">Retrieved Context</h2>
+    <div class="sources-grid"> -->
+      <!-- Placeholder source card 1 -->
+      <!-- <article class="source-card">
+        <h3 class="source-title">Python Tutorial</h3>
+        <p class="source-preview">Lists are mutable sequences used to store collections of items. They can hold elements of different types and support indexing, slicing, and iteration.</p>
+        <span class="source-score">Score: 0.94</span>
+      </article> -->
+
+      <!-- Placeholder source card 2 -->
+      <!-- <article class="source-card">
+        <h3 class="source-title">Django Documentation</h3>
+        <p class="source-preview">Middleware is a lightweight plugin system for globally altering Django's input or output. Each component is responsible for a specific function.</p>
+        <span class="source-score">Score: 0.89</span>
+      </article> -->
+
+      <!-- Placeholder source card 3 -->
+      <!-- <article class="source-card">
+        <h3 class="source-title">FastAPI Documentation</h3>
+        <p class="source-preview">Dependency Injection allows declaring things that a path operation function needs to work, such as shared logic or database connections.</p>
+        <span class="source-score">Score: 0.86</span>
+      </article>
+    </div>
+  </section> -->
+
+  <!-- ---------- Response Information Card ---------- -->
+  <!-- <section class="card">
+    <h2 class="card-title">Response Information</h2>
+    <div class="response-info-grid">
+      <div class="info-item">
+        <div class="info-value">{{ model_name|default:"Phi-3" }}</div>
+        <div class="info-label">Model</div>
+      </div>
+      <div class="info-item">
+        <div class="info-value">{{ chunks_retrieved|default:"5" }}</div>
+        <div class="info-label">Chunks Retrieved</div>
+      </div>
+      <div class="info-item">
+        <div class="info-value">{{ response_time|default:"0.00" }} sec</div>
+        <div class="info-label">Response Time</div>
+      </div>
+    </div>
+  </section>
+
+</main> -->

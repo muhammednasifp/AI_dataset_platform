@@ -46,6 +46,18 @@ class DatasetAnalyzer:
 
         return self.total_words()/len(self.documents)
     
+    def total_char(self):
+        total=0
+
+        for doc in self.documents:
+            total+=len(doc.content)
+        
+        return total
+
+    def average_char_count(self):
+
+        return self.total_char()/len(self.documents)
+
     def longest_document(self):
 
         longest_doc=None

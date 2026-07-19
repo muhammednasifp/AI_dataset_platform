@@ -1,0 +1,245 @@
+<section class="hero">
+  <div class="container">
+    <h1>Dataset Analytics</h1>
+    <p class="lead">Monitor dataset quality, statistics, and processing insights.</p>
+  </div>
+</section>
+
+<main class="container main-content">
+
+  <!-- ============ 1. OVERVIEW CARDS ============ -->
+  <section>
+    <div class="row">
+      <div class="col-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>
+          </div>
+          <div class="stat-value">{{total_docs|default:"nil" }}</div>
+          <div class="stat-label">Total Documents</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="14" y2="18"></line></svg>
+          </div>
+          <div class="stat-value">{{ total_words |default:"nil" }}</div>
+          <div class="stat-label">Total Words</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+          </div>
+          <div class="stat-value">{{ average_words|default:"nil" }}</div>
+          <div class="stat-label">Average Words / Document</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 11 3.83A2 2 0 0 0 9.59 3.17H4a1 1 0 0 0-1 1v5.59a2 2 0 0 0 .66 1.41l9.59 9.59a2 2 0 0 0 2.83 0l4.51-4.51a2 2 0 0 0 0-2.83z"></path><circle cx="7.5" cy="7.5" r="1.5"></circle></svg>
+          </div>
+          <div class="stat-value">{{ dataset_version|default:"nil" }}</div>
+          <div class="stat-label">Dataset Version</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. DATASET STATISTICS ============ -->
+  <section class="card">
+    <div class="card-header">
+      <h2 class="card-title">Dataset Statistics</h2>
+    </div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-label">Longest Document</div>
+        <div class="data-value">{{ longest_doc|default:"nil" }}</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Shortest Document</div>
+        <div class="data-value">{{ shortest_doc|default:"nil" }}</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Average Character Count</div>
+        <div class="data-value">{{ average_char|default:"nil" }}</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Average Word Count</div>
+        <div class="data-value">{{ average_words|default:"nil" }}</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Total Characters</div>
+        <div class="data-value">{{ total_char|default:"nil" }}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. CONTENT QUALITY ANALYSIS ============ -->
+  <section class="card">
+    <div class="card-header">
+      <h2 class="card-title">Content Quality Analysis</h2>
+    </div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-label">Average Quality Score</div>
+        <div class="data-value">{{ average_score|default:"nil" }}</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Highest Quality Score</div>
+        <div class="data-value">{{ high_quality_doc|default:"nil" }}</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Lowest Quality Score</div>
+        <div class="data-value">{{ low_quality_doc|default:"nil" }}</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">High Quality Documents</div>
+        <div class="data-value">{{high_quality_doc_count|default:"nil" }}</div>
+        <span class="badge badge-green">High</span>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Medium Quality Documents</div>
+        <div class="data-value">{{ medium_quality_count|default:"nil" }}</div>
+        <span class="badge badge-yellow">Medium</span>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Low Quality Documents</div>
+        <div class="data-value">{{low_quality_doc_count|default:"0" }}</div>
+        <span class="badge badge-red">Low</span>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Noisy Documents</div>
+        <div class="data-value">{{ noisy_docs_count|default:"nil" }}</div>
+        <span class="badge badge-red">Noisy</span>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Short Documents</div>
+        <div class="data-value">{{ short_docs_count|default:"nil" }}</div>
+        <span class="badge badge-yellow">Short</span>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Long Documents</div>
+        <div class="data-value">{{ long_docs_count|default:"nil" }}</div>
+        <span class="badge badge-green">Long</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. QUALITY DISTRIBUTION ============ -->
+  <!-- <section class="card">
+    <div class="card-header">
+      <h2 class="card-title">Quality Distribution</h2>
+    </div>
+    <div class="bar-group">
+      <div>
+        <div class="bar-row-header">
+          <span class="bar-row-label"><span class="bar-dot bar-dot-green"></span> High Quality</span>
+          <span class="bar-row-value">{{ high_quality_pct|default:"nil" }}</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill bar-fill-green" style="width: {{ high_quality_pct|default:"69%" }};"></div>
+        </div>
+      </div>
+      <div>
+        <div class="bar-row-header">
+          <span class="bar-row-label"><span class="bar-dot bar-dot-yellow"></span> Medium Quality</span>
+          <span class="bar-row-value">{{ medium_quality_pct|default:"nil" }}</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill bar-fill-yellow" style="width: {{ medium_quality_pct|default:"21%" }};"></div>
+        </div>
+      </div>
+      <div>
+        <div class="bar-row-header">
+          <span class="bar-row-label"><span class="bar-dot bar-dot-red"></span> Low Quality</span>
+          <span class="bar-row-value">{{ low_quality_pct|default:"nil" }}</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill bar-fill-red" style="width: {{ low_quality_pct|default:"10%" }};"></div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ============ 5. DATASET PROCESSING INFORMATION ============ -->
+  <!-- <section class="card">
+    <div class="card-header">
+      <h2 class="card-title">Dataset Processing Information</h2>
+    </div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-label">Last Updated</div>
+        <div class="data-value">{{ last_updated|default:"nil" }}</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Processing Time</div>
+        <div class="data-value">{{ processing_time|default:"nil" }}</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Validation Status</div>
+        <div class="data-value">{{ validation_status|default:"Passed" }}</div>
+        <span class="badge badge-green">Validated</span>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Embedding Model Used</div>
+        <div class="data-value">{{ embedding_model|default:"all-MiniLM-L6-v2" }}</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Chunk Size</div>
+        <div class="data-value">{{ chunk_size|default:"200" }}</div>
+      </div>
+      <div class="data-item">
+        <div class="data-label">Total Chunks Generated</div>
+        <div class="data-value">{{ total_chunks|default:"631" }}</div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ============ 6. RECENT ACTIVITY ============ -->
+  <!-- <section class="card">
+    <div class="card-header">
+      <h2 class="card-title">Recent Activity</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <p class="timeline-title">Dataset Created</p>
+        <p class="timeline-meta">{{ activity_created_at|default:"2026-07-17 09:02" }}</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-title">Documents Collected</p>
+        <p class="timeline-meta">{{ activity_collected_at|default:"2026-07-17 09:14" }}</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-title">Validation Completed</p>
+        <p class="timeline-meta">{{ activity_validated_at|default:"2026-07-17 09:26" }}</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-title">Cleaning Completed</p>
+        <p class="timeline-meta">{{ activity_cleaned_at|default:"2026-07-17 09:31" }}</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-title">Quality Analysis Completed</p>
+        <p class="timeline-meta">{{ activity_quality_at|default:"2026-07-17 09:40" }}</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-title">Embeddings Generated</p>
+        <p class="timeline-meta">{{ activity_embeddings_at|default:"2026-07-17 09:52" }}</p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ============ 7. ACTION BUTTONS ============ -->
+  <section class="card">
+    <div class="action-grid">
+      <button type="button" class="btn btn-primary-custom">Refresh Analytics</button>
+      <button type="button" class="btn btn-outline-custom">Download Report</button>
+      <button type="button" class="btn btn-outline-custom">View Dataset</button>
+      <button type="button" class="btn btn-outline-custom">Generate Embeddings</button>
+    </div>
+  </section>
+
+</main>

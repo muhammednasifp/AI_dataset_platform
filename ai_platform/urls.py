@@ -20,5 +20,6 @@ from . import views
 urlpatterns = [
     path('',views.home,name='home'),
     path('build_dataset/',views.build_dataset,name='build_dataset'),
-    path('chat_bot/',views.chat_bot,name='chat_bot')
+    path('chat_bot/',views.chat_bot,name='chat_bot'),
+    path('analytics/',views.analytics,name='analytics')
 ]

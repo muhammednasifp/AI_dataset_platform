@@ -1,13 +1,7 @@
-from src.models.document import Document
-from src.storage.jsonl_store import JSONLStore
-from src.pipelines.collect_python_docs import DatasetPipeline
+from src.pipelines.dataset_pipeline import DatasetPipeline
 from src.config import Config
-from src.analytics.dataset_analyzer import DatasetAnalyzer
-from src.storage.jsonl_store import JSONLStore
-from src.analytics.quality_scorer import QualityScorer
-from src.analytics.dataset_report import DatasetReport
 from src.factories.rag_factory import RAGFactory
-
+from src.pipelines.analytics_pipeline import AnalyticsPipeline
 config=Config()
 urls=[
     "https://docs.python.org/3/tutorial/",
@@ -42,14 +36,9 @@ while True:
                 print("\n")
             
             case 3:
-                #improve Later
-                store=JSONLStore(config.jsonl_path,model_class=Document)
-                documents=store.read_all()
-                analyzer=DatasetAnalyzer(documents=documents)
-                scorer=QualityScorer(documents=documents)
-                report_obj=DatasetReport(analyzer=analyzer,scorer=scorer)
-
-                print(report_obj.generate())
+                pipline=AnalyticsPipeline(config=config)
+                report_obj=pipline.build_report()
+                print(report_obj.generate_text())
 
             case 4:
                 exit()

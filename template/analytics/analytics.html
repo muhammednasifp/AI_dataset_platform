@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content_style %}
-    <link rel="stylesheet" href="{% static 'style/chat_style.css'%}">
+    <link rel="stylesheet" href="{% static 'style/analytics_style.css'%}">
 {%endblock content_style %}
 
 {% block nav_content %}
@@ -10,7 +10,7 @@
 {%endblock nav_content %}
 
 {% block content %}
-    {%include 'chat_bot/chat_bot_content.html'%}
+    {%include 'analytics/analytics_content.html'%}
 {%endblock content %}
 
 {% block footer_content %}

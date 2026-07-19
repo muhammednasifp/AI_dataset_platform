@@ -37,6 +37,7 @@ class ContentQualityAnalyzer:
 
             if document.metadata["word_count"]<=threshold:
                 short_docs.append(document)
+
         return short_docs
 
     def long_documents(self,threshold=500):
@@ -73,6 +74,42 @@ class ContentQualityAnalyzer:
             
 
         return noise_doc
+    
+    def high_quality_count(self):
+
+        count = 0
+
+        for doc in self.documents:
+
+            if doc.metadata["quality_score"] >= 0.8:
+                count += 1
+
+        return count
+    
+    def low_quality_count(self):
+
+        count = 0
+
+        for doc in self.documents:
+
+            if doc.metadata["quality_score"] < 0.5:
+                count += 1
+
+        return count
+    
+    def medium_quality_count(self):
+
+        count = 0
+
+        for doc in self.documents:
+
+            score = doc.metadata["quality_score"]
+
+            if 0.5 <= score < 0.8:
+                count += 1
+
+        return count
+    
 
 # store=JSONLStore("data/raw/documents.jsonl")
 

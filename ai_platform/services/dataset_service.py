@@ -1,5 +1,5 @@
 from src.config import Config
-from src.pipelines.collect_python_docs import DatasetPipeline
+from src.pipelines.dataset_pipeline import DatasetPipeline
 class DatasetService:
     
     @staticmethod

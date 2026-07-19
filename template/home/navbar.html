@@ -18,8 +18,10 @@
               href="{% url 'home' %}">Home</a></li>
       <li><a class="nav-link {% if request.path == '/build_dataset/' %}active{% endif %}"
               href="{% url 'build_dataset' %}">Build Dataset</a></li>
-      <li><a class="nav-link " href="{% url 'chat_bot' %}">Ask Questions</a></li>
-      <li><a class="nav-link " href="">Analytics</a></li>
+      <li><a class="nav-link {% if request.path == '/chat_bot/' %}active{% endif %}" 
+              href="{% url 'chat_bot' %}">Ask Questions</a></li>
+      <li><a class="nav-link {% if request.path == '/analytics/' %}active{% endif %}"
+              href="{% url 'analytics' %}">Analytics</a></li>
     </ul>
   </div>
 </nav>

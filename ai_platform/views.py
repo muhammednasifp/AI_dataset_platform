@@ -3,21 +3,16 @@ from django.http import HttpResponse
 # from src.factories.rag_factory import RAGFactory
 # from src.config import Config
 from .services.dataset_service import DatasetService
-
+from .services.chat_service import ChatService
+from .services.analytics_service import AnalyticsService
 def home(request):
-
-    # config=Config()
-    # factory_obj=RAGFactory(config=config)
-
-    # rag_obj=factory_obj.factory()
-    
-    # answer=rag_obj.ask("What is Python")
 
     return render(request,'home/home.html')
 
 def build_dataset(request):
 
-    if request.POST:
+    if request.method=="POST":
+        
         urls=request.POST.get('doc_urls')     
         chunk_size=request.POST.get('chunk_size') 
         top_k=request.POST.get('top_k')
@@ -30,4 +25,22 @@ def build_dataset(request):
 
 
 def chat_bot(request):
+
+    if request.method == "POST":
+        question=request.POST.get('question') 
+
+        context=ChatService.ask(question=question)
+
+        context["question"]=question
+
+        return render(request,'chat_bot/chat_bot.html',context)
+        
     return render(request,'chat_bot/chat_bot.html')
+
+def analytics(request):
+
+    context=AnalyticsService.get_statics()
+
+    print(context["low_quality_doc_count"])
+    
+    return render(request,'analytics/analytics.html',context)

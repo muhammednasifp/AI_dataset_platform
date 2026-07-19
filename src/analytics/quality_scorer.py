@@ -29,7 +29,7 @@ class QualityScorer:
             score += 25
             reasons.append("url exist")
 
-        final_score["score"]=score
+        final_score["score"]=round(score / 100, 2)
         final_score["reasons"]=reasons
 
         return final_score
@@ -70,18 +70,7 @@ class QualityScorer:
 
         return ranked[-1]
 
-    def filter_high_quality(self):
-        
-        filterd_docs=[]
-        ranked=self.rank_document()
-
-        for item in ranked:
-
-            if item["quality_score"]>=80:
-                
-                filterd_docs.append(item)
-
-        return filterd_docs
+    
 
 # store=JSONLStore("data/raw/documents.jsonl")
 
