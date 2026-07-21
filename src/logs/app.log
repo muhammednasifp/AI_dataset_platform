@@ -1,0 +1,968 @@
+2026-07-21 21:30:09,004 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://docs.python.org/3/tutorial/
+2026-07-21 21:30:09,005 | INFO | src.collectors.docs_collector | Collecting document from https://docs.python.org/3/tutorial/
+2026-07-21 21:30:09,124 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 21:30:09,160 | INFO | src.collectors.docs_collector | Document created successfully (id=785b1ab0-a9c4-40d5-a244-8b0f84649c58)
+2026-07-21 21:30:09,161 | INFO | src.cleaners.document_cleaner | Cleaning document (id=785b1ab0-a9c4-40d5-a244-8b0f84649c58)
+2026-07-21 21:30:09,162 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=785b1ab0-a9c4-40d5-a244-8b0f84649c58)
+2026-07-21 21:30:09,162 | INFO | src.validator.document_validator | Validating document (id=785b1ab0-a9c4-40d5-a244-8b0f84649c58)
+2026-07-21 21:30:09,162 | INFO | src.enrichers.document_enricher | Enriching document (id=785b1ab0-a9c4-40d5-a244-8b0f84649c58)
+2026-07-21 21:30:09,162 | INFO | src.enrichers.document_enricher | Enrichment completed (id=785b1ab0-a9c4-40d5-a244-8b0f84649c58, words=363, chars=2325, quality=0.50)
+2026-07-21 21:30:09,164 | INFO | src.pipelines.dataset_pipeline | Saved document (id=785b1ab0-a9c4-40d5-a244-8b0f84649c58, title='The Python Tutorial — Python 3.14.6 documentation')
+2026-07-21 21:30:09,164 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://www.programiz.com/python-programming
+2026-07-21 21:30:09,165 | INFO | src.collectors.docs_collector | Collecting document from https://www.programiz.com/python-programming
+2026-07-21 21:30:09,591 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 21:30:09,628 | INFO | src.collectors.docs_collector | Document created successfully (id=46c1e0db-f0a4-480b-b39d-6807bce8a1df)
+2026-07-21 21:30:09,628 | INFO | src.cleaners.document_cleaner | Cleaning document (id=46c1e0db-f0a4-480b-b39d-6807bce8a1df)
+2026-07-21 21:30:09,629 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=46c1e0db-f0a4-480b-b39d-6807bce8a1df)
+2026-07-21 21:30:09,629 | INFO | src.validator.document_validator | Validating document (id=46c1e0db-f0a4-480b-b39d-6807bce8a1df)
+2026-07-21 21:30:09,629 | INFO | src.enrichers.document_enricher | Enriching document (id=46c1e0db-f0a4-480b-b39d-6807bce8a1df)
+2026-07-21 21:30:09,629 | INFO | src.enrichers.document_enricher | Enrichment completed (id=46c1e0db-f0a4-480b-b39d-6807bce8a1df, words=1061, chars=6769, quality=1.00)
+2026-07-21 21:30:09,630 | INFO | src.pipelines.dataset_pipeline | Saved document (id=46c1e0db-f0a4-480b-b39d-6807bce8a1df, title='Learn Python Programming')
+2026-07-21 21:30:09,630 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-21 21:30:09,630 | INFO | src.collectors.docs_collector | Collecting document from https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-21 21:30:09,835 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 21:30:09,890 | INFO | src.collectors.docs_collector | Document created successfully (id=5c157d9d-426f-463b-bb4e-b33152806413)
+2026-07-21 21:30:09,891 | INFO | src.cleaners.document_cleaner | Cleaning document (id=5c157d9d-426f-463b-bb4e-b33152806413)
+2026-07-21 21:30:09,892 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=5c157d9d-426f-463b-bb4e-b33152806413)
+2026-07-21 21:30:09,892 | INFO | src.validator.document_validator | Validating document (id=5c157d9d-426f-463b-bb4e-b33152806413)
+2026-07-21 21:30:09,892 | INFO | src.enrichers.document_enricher | Enriching document (id=5c157d9d-426f-463b-bb4e-b33152806413)
+2026-07-21 21:30:09,892 | INFO | src.enrichers.document_enricher | Enrichment completed (id=5c157d9d-426f-463b-bb4e-b33152806413, words=152, chars=1067, quality=0.50)
+2026-07-21 21:30:09,893 | INFO | src.pipelines.dataset_pipeline | Saved document (id=5c157d9d-426f-463b-bb4e-b33152806413, title='Python - Glossary | MDN')
+2026-07-21 21:30:09,893 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://codehs.com/textbook/intropython_textbook/
+2026-07-21 21:30:09,893 | INFO | src.collectors.docs_collector | Collecting document from https://codehs.com/textbook/intropython_textbook/
+2026-07-21 21:30:10,868 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 21:30:11,062 | INFO | src.collectors.docs_collector | Document created successfully (id=a04cc941-d172-4507-9a3a-5f47f595df4d)
+2026-07-21 21:30:11,064 | INFO | src.cleaners.document_cleaner | Cleaning document (id=a04cc941-d172-4507-9a3a-5f47f595df4d)
+2026-07-21 21:30:11,064 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=a04cc941-d172-4507-9a3a-5f47f595df4d)
+2026-07-21 21:30:11,064 | INFO | src.validator.document_validator | Validating document (id=a04cc941-d172-4507-9a3a-5f47f595df4d)
+2026-07-21 21:30:11,064 | INFO | src.enrichers.document_enricher | Enriching document (id=a04cc941-d172-4507-9a3a-5f47f595df4d)
+2026-07-21 21:30:11,064 | INFO | src.enrichers.document_enricher | Enrichment completed (id=a04cc941-d172-4507-9a3a-5f47f595df4d, words=105, chars=658, quality=0.50)
+2026-07-21 21:30:11,065 | INFO | src.pipelines.dataset_pipeline | Saved document (id=a04cc941-d172-4507-9a3a-5f47f595df4d, title='Textbook: Intro to Python Textbook | CodeHS')
+2026-07-21 21:30:11,065 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://coddy.tech/docs/python/input-and-print
+2026-07-21 21:30:11,065 | INFO | src.collectors.docs_collector | Collecting document from https://coddy.tech/docs/python/input-and-print
+2026-07-21 21:30:11,216 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 21:30:11,250 | INFO | src.collectors.docs_collector | Document created successfully (id=660f63b8-8856-48be-9bad-317bf30d67e7)
+2026-07-21 21:30:11,251 | INFO | src.cleaners.document_cleaner | Cleaning document (id=660f63b8-8856-48be-9bad-317bf30d67e7)
+2026-07-21 21:30:11,251 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=660f63b8-8856-48be-9bad-317bf30d67e7)
+2026-07-21 21:30:11,251 | INFO | src.validator.document_validator | Validating document (id=660f63b8-8856-48be-9bad-317bf30d67e7)
+2026-07-21 21:30:11,251 | INFO | src.enrichers.document_enricher | Enriching document (id=660f63b8-8856-48be-9bad-317bf30d67e7)
+2026-07-21 21:30:11,251 | INFO | src.enrichers.document_enricher | Enrichment completed (id=660f63b8-8856-48be-9bad-317bf30d67e7, words=742, chars=4361, quality=1.00)
+2026-07-21 21:30:11,252 | INFO | src.pipelines.dataset_pipeline | Saved document (id=660f63b8-8856-48be-9bad-317bf30d67e7, title='Runnable Python Docs: Input & Print | Coddy')
+2026-07-21 22:30:21,951 | INFO | sentence_transformers.base.model | No device provided, using cpu
+2026-07-21 22:30:24,257 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:30:24,260 | WARNING | huggingface_hub.utils._http | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-07-21 22:30:24,342 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-07-21 22:30:24,695 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:30:24,777 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-07-21 22:30:24,893 | INFO | sentence_transformers.base.model | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-21 22:30:25,222 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:30:25,287 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-07-21 22:30:25,606 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:30:25,675 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+2026-07-21 22:30:26,236 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:30:26,305 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-07-21 22:30:26,805 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:30:26,881 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-07-21 22:30:27,380 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-07-21 22:30:27,714 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:30:27,792 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-07-21 22:30:28,388 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-07-21 22:30:28,882 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-07-21 22:30:29,208 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-07-21 22:30:29,543 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-07-21 22:30:29,871 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:30:29,944 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-07-21 22:30:30,471 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:30:30,541 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-07-21 22:30:30,866 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:30:30,935 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-07-21 22:30:31,265 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:30:31,338 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-07-21 22:30:31,841 | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-07-21 22:30:32,192 | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-07-21 22:30:32,773 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:30:32,846 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-07-21 22:30:33,351 | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-07-21 22:30:33,365 | INFO | src.search.semantic_searcher | Semantic search started
+2026-07-21 22:30:33,525 | INFO | src.search.semantic_searcher | Query embedding generated
+2026-07-21 22:30:33,549 | INFO | src.search.semantic_searcher | Loaded 76 embeddings
+2026-07-21 22:30:33,550 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,552 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,552 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,552 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,553 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,553 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,553 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,553 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,553 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,554 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,554 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,554 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,554 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,554 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,554 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,554 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,555 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,555 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,555 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,555 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,555 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,555 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,556 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,556 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,556 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,556 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,556 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,556 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,557 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,557 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,557 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,557 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,557 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,558 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,558 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,558 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,558 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,558 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,558 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,558 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,559 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,559 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,559 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,559 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,559 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,559 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,560 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,560 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,560 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,560 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,561 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,561 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,561 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,561 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,561 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,562 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,562 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,562 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,562 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,562 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,563 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,563 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,563 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,563 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,563 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,563 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,564 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,564 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,564 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,564 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,564 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,564 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,565 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,565 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,565 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,565 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:30:33,566 | INFO | src.search.semantic_searcher | Ranked 76 chunks by similarity
+2026-07-21 22:30:33,566 | INFO | src.search.semantic_searcher | Selected top 3 chunks
+2026-07-21 22:30:33,587 | INFO | src.search.semantic_searcher | Loaded 76 chunks
+2026-07-21 22:30:33,587 | INFO | src.search.semantic_searcher | Semantic search completed (3 chunks returned)
+2026-07-21 22:30:33,588 | INFO | src.rag.context_builder | Building context from 3 chunks
+2026-07-21 22:30:33,588 | INFO | src.rag.context_builder | Context built successfully (615 characters)
+2026-07-21 22:30:33,588 | INFO | src.rag.prompt_builder | Building prompt
+2026-07-21 22:30:33,588 | INFO | src.rag.prompt_builder | Prompt built successfully (828 characters)
+2026-07-21 22:31:16,153 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-21 22:37:17,446 | INFO | sentence_transformers.base.model | No device provided, using cpu
+2026-07-21 22:37:17,896 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:37:17,897 | WARNING | huggingface_hub.utils._http | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-07-21 22:37:17,961 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-07-21 22:37:18,256 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:37:18,295 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-07-21 22:37:18,305 | INFO | sentence_transformers.base.model | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-21 22:37:18,626 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:37:18,669 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-07-21 22:37:19,026 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:37:19,086 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+2026-07-21 22:37:19,416 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:37:19,456 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-07-21 22:37:19,756 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:37:19,801 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-07-21 22:37:20,106 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-07-21 22:37:20,401 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:37:20,446 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-07-21 22:37:20,937 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-07-21 22:37:21,236 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-07-21 22:37:21,546 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-07-21 22:37:21,920 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-07-21 22:37:22,217 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:37:22,256 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-07-21 22:37:22,575 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:37:22,646 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-07-21 22:37:22,978 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:37:23,042 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-07-21 22:37:23,336 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:37:23,386 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-07-21 22:37:23,689 | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-07-21 22:37:23,995 | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-07-21 22:37:24,361 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-21 22:37:24,409 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-07-21 22:37:24,705 | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-07-21 22:37:24,721 | INFO | src.search.semantic_searcher | Semantic search started
+2026-07-21 22:37:24,855 | INFO | src.search.semantic_searcher | Query embedding generated
+2026-07-21 22:37:24,875 | INFO | src.search.semantic_searcher | Loaded 76 embeddings
+2026-07-21 22:37:24,875 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,876 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,879 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,879 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,880 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Calculating similarity scores
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Ranked 76 chunks by similarity
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Selected top 3 chunks
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Loaded 76 chunks
+2026-07-21 22:37:24,885 | INFO | src.search.semantic_searcher | Semantic search completed (3 chunks returned)
+2026-07-21 22:37:24,885 | INFO | src.rag.context_builder | Building context from 3 chunks
+2026-07-21 22:37:24,885 | INFO | src.rag.context_builder | Context built successfully (615 characters)
+2026-07-21 22:37:24,885 | INFO | src.rag.prompt_builder | Building prompt
+2026-07-21 22:37:24,885 | INFO | src.rag.prompt_builder | Prompt built successfully (828 characters)
+2026-07-21 22:37:24,885 | INFO | src.rag.generator | Generating response using LLM
+2026-07-21 22:38:10,051 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-21 22:38:10,085 | INFO | src.rag.generator | LLM response generated successfully
+2026-07-21 23:57:06,170 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://docs.python.org/3/tutorial/
+2026-07-21 23:57:06,170 | INFO | src.collectors.docs_collector | Collecting document from https://docs.python.org/3/tutorial/
+2026-07-21 23:57:06,469 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:06,500 | INFO | src.collectors.docs_collector | Document created successfully (id=8a4cfe5a-5231-456c-ae4c-9ac72b3985f6)
+2026-07-21 23:57:06,500 | INFO | src.cleaners.document_cleaner | Cleaning document (id=8a4cfe5a-5231-456c-ae4c-9ac72b3985f6)
+2026-07-21 23:57:06,500 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=8a4cfe5a-5231-456c-ae4c-9ac72b3985f6)
+2026-07-21 23:57:06,500 | INFO | src.validator.document_validator | Validating document (id=8a4cfe5a-5231-456c-ae4c-9ac72b3985f6)
+2026-07-21 23:57:06,500 | INFO | src.enrichers.document_enricher | Enriching document (id=8a4cfe5a-5231-456c-ae4c-9ac72b3985f6)
+2026-07-21 23:57:06,500 | INFO | src.enrichers.document_enricher | Enrichment completed (id=8a4cfe5a-5231-456c-ae4c-9ac72b3985f6, words=363, chars=2325, quality=0.50)
+2026-07-21 23:57:06,500 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:06,500 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:06,500 | INFO | src.pipelines.dataset_pipeline | Saved document (id=8a4cfe5a-5231-456c-ae4c-9ac72b3985f6, title='The Python Tutorial — Python 3.14.6 documentation')
+2026-07-21 23:57:06,510 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://www.programiz.com/python-programming
+2026-07-21 23:57:06,510 | INFO | src.collectors.docs_collector | Collecting document from https://www.programiz.com/python-programming
+2026-07-21 23:57:06,891 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:06,930 | INFO | src.collectors.docs_collector | Document created successfully (id=4639e5aa-c72c-4bef-beeb-2dfde77ef74a)
+2026-07-21 23:57:06,930 | INFO | src.cleaners.document_cleaner | Cleaning document (id=4639e5aa-c72c-4bef-beeb-2dfde77ef74a)
+2026-07-21 23:57:06,930 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=4639e5aa-c72c-4bef-beeb-2dfde77ef74a)
+2026-07-21 23:57:06,930 | INFO | src.validator.document_validator | Validating document (id=4639e5aa-c72c-4bef-beeb-2dfde77ef74a)
+2026-07-21 23:57:06,930 | INFO | src.enrichers.document_enricher | Enriching document (id=4639e5aa-c72c-4bef-beeb-2dfde77ef74a)
+2026-07-21 23:57:06,930 | INFO | src.enrichers.document_enricher | Enrichment completed (id=4639e5aa-c72c-4bef-beeb-2dfde77ef74a, words=1061, chars=6769, quality=1.00)
+2026-07-21 23:57:06,930 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:06,930 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:06,930 | INFO | src.pipelines.dataset_pipeline | Saved document (id=4639e5aa-c72c-4bef-beeb-2dfde77ef74a, title='Learn Python Programming')
+2026-07-21 23:57:06,930 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-21 23:57:06,930 | INFO | src.collectors.docs_collector | Collecting document from https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-21 23:57:07,051 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:07,273 | INFO | src.collectors.docs_collector | Document created successfully (id=859fce43-947c-454d-aa0c-b8f0595136ba)
+2026-07-21 23:57:07,273 | INFO | src.cleaners.document_cleaner | Cleaning document (id=859fce43-947c-454d-aa0c-b8f0595136ba)
+2026-07-21 23:57:07,273 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=859fce43-947c-454d-aa0c-b8f0595136ba)
+2026-07-21 23:57:07,273 | INFO | src.validator.document_validator | Validating document (id=859fce43-947c-454d-aa0c-b8f0595136ba)
+2026-07-21 23:57:07,273 | INFO | src.enrichers.document_enricher | Enriching document (id=859fce43-947c-454d-aa0c-b8f0595136ba)
+2026-07-21 23:57:07,273 | INFO | src.enrichers.document_enricher | Enrichment completed (id=859fce43-947c-454d-aa0c-b8f0595136ba, words=152, chars=1067, quality=0.50)
+2026-07-21 23:57:07,273 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:07,273 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:07,273 | INFO | src.pipelines.dataset_pipeline | Saved document (id=859fce43-947c-454d-aa0c-b8f0595136ba, title='Python - Glossary | MDN')
+2026-07-21 23:57:07,273 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://codehs.com/textbook/intropython_textbook/
+2026-07-21 23:57:07,273 | INFO | src.collectors.docs_collector | Collecting document from https://codehs.com/textbook/intropython_textbook/
+2026-07-21 23:57:07,798 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:07,985 | INFO | src.collectors.docs_collector | Document created successfully (id=f177766c-da42-4f78-a071-4d85c6b4fdda)
+2026-07-21 23:57:07,985 | INFO | src.cleaners.document_cleaner | Cleaning document (id=f177766c-da42-4f78-a071-4d85c6b4fdda)
+2026-07-21 23:57:07,985 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=f177766c-da42-4f78-a071-4d85c6b4fdda)
+2026-07-21 23:57:07,985 | INFO | src.validator.document_validator | Validating document (id=f177766c-da42-4f78-a071-4d85c6b4fdda)
+2026-07-21 23:57:07,985 | INFO | src.enrichers.document_enricher | Enriching document (id=f177766c-da42-4f78-a071-4d85c6b4fdda)
+2026-07-21 23:57:07,985 | INFO | src.enrichers.document_enricher | Enrichment completed (id=f177766c-da42-4f78-a071-4d85c6b4fdda, words=105, chars=658, quality=0.50)
+2026-07-21 23:57:07,985 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:07,985 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:07,985 | INFO | src.pipelines.dataset_pipeline | Saved document (id=f177766c-da42-4f78-a071-4d85c6b4fdda, title='Textbook: Intro to Python Textbook | CodeHS')
+2026-07-21 23:57:07,985 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://coddy.tech/docs/python/input-and-print
+2026-07-21 23:57:07,985 | INFO | src.collectors.docs_collector | Collecting document from https://coddy.tech/docs/python/input-and-print
+2026-07-21 23:57:08,670 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:08,699 | INFO | src.collectors.docs_collector | Document created successfully (id=29e67343-b73d-4e8b-8ed9-6beb09055e19)
+2026-07-21 23:57:08,699 | INFO | src.cleaners.document_cleaner | Cleaning document (id=29e67343-b73d-4e8b-8ed9-6beb09055e19)
+2026-07-21 23:57:08,699 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=29e67343-b73d-4e8b-8ed9-6beb09055e19)
+2026-07-21 23:57:08,699 | INFO | src.validator.document_validator | Validating document (id=29e67343-b73d-4e8b-8ed9-6beb09055e19)
+2026-07-21 23:57:08,699 | INFO | src.enrichers.document_enricher | Enriching document (id=29e67343-b73d-4e8b-8ed9-6beb09055e19)
+2026-07-21 23:57:08,699 | INFO | src.enrichers.document_enricher | Enrichment completed (id=29e67343-b73d-4e8b-8ed9-6beb09055e19, words=742, chars=4361, quality=1.00)
+2026-07-21 23:57:08,699 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:08,699 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:08,699 | INFO | src.pipelines.dataset_pipeline | Saved document (id=29e67343-b73d-4e8b-8ed9-6beb09055e19, title='Runnable Python Docs: Input & Print | Coddy')
+2026-07-21 23:57:18,572 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://docs.python.org/3/tutorial/
+2026-07-21 23:57:18,572 | INFO | src.collectors.docs_collector | Collecting document from https://docs.python.org/3/tutorial/
+2026-07-21 23:57:18,640 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:18,657 | INFO | src.collectors.docs_collector | Document created successfully (id=65434a81-240f-49b7-9a33-ab9dc576183c)
+2026-07-21 23:57:18,658 | INFO | src.cleaners.document_cleaner | Cleaning document (id=65434a81-240f-49b7-9a33-ab9dc576183c)
+2026-07-21 23:57:18,658 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=65434a81-240f-49b7-9a33-ab9dc576183c)
+2026-07-21 23:57:18,658 | INFO | src.validator.document_validator | Validating document (id=65434a81-240f-49b7-9a33-ab9dc576183c)
+2026-07-21 23:57:18,658 | INFO | src.enrichers.document_enricher | Enriching document (id=65434a81-240f-49b7-9a33-ab9dc576183c)
+2026-07-21 23:57:18,658 | INFO | src.enrichers.document_enricher | Enrichment completed (id=65434a81-240f-49b7-9a33-ab9dc576183c, words=363, chars=2325, quality=0.50)
+2026-07-21 23:57:18,658 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:18,659 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:18,661 | INFO | src.pipelines.dataset_pipeline | Saved document (id=65434a81-240f-49b7-9a33-ab9dc576183c, title='The Python Tutorial — Python 3.14.6 documentation')
+2026-07-21 23:57:18,661 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://www.programiz.com/python-programming
+2026-07-21 23:57:18,661 | INFO | src.collectors.docs_collector | Collecting document from https://www.programiz.com/python-programming
+2026-07-21 23:57:19,055 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:19,098 | INFO | src.collectors.docs_collector | Document created successfully (id=fcb74682-80f9-423f-b195-6fc2954f3283)
+2026-07-21 23:57:19,099 | INFO | src.cleaners.document_cleaner | Cleaning document (id=fcb74682-80f9-423f-b195-6fc2954f3283)
+2026-07-21 23:57:19,100 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=fcb74682-80f9-423f-b195-6fc2954f3283)
+2026-07-21 23:57:19,100 | INFO | src.validator.document_validator | Validating document (id=fcb74682-80f9-423f-b195-6fc2954f3283)
+2026-07-21 23:57:19,100 | INFO | src.enrichers.document_enricher | Enriching document (id=fcb74682-80f9-423f-b195-6fc2954f3283)
+2026-07-21 23:57:19,100 | INFO | src.enrichers.document_enricher | Enrichment completed (id=fcb74682-80f9-423f-b195-6fc2954f3283, words=1061, chars=6769, quality=1.00)
+2026-07-21 23:57:19,100 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:19,101 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:19,101 | INFO | src.pipelines.dataset_pipeline | Saved document (id=fcb74682-80f9-423f-b195-6fc2954f3283, title='Learn Python Programming')
+2026-07-21 23:57:19,101 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-21 23:57:19,101 | INFO | src.collectors.docs_collector | Collecting document from https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-21 23:57:19,164 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:19,216 | INFO | src.collectors.docs_collector | Document created successfully (id=663b8eb9-eafb-4351-9521-8a02ed4f6347)
+2026-07-21 23:57:19,217 | INFO | src.cleaners.document_cleaner | Cleaning document (id=663b8eb9-eafb-4351-9521-8a02ed4f6347)
+2026-07-21 23:57:19,217 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=663b8eb9-eafb-4351-9521-8a02ed4f6347)
+2026-07-21 23:57:19,218 | INFO | src.validator.document_validator | Validating document (id=663b8eb9-eafb-4351-9521-8a02ed4f6347)
+2026-07-21 23:57:19,218 | INFO | src.enrichers.document_enricher | Enriching document (id=663b8eb9-eafb-4351-9521-8a02ed4f6347)
+2026-07-21 23:57:19,218 | INFO | src.enrichers.document_enricher | Enrichment completed (id=663b8eb9-eafb-4351-9521-8a02ed4f6347, words=152, chars=1067, quality=0.50)
+2026-07-21 23:57:19,218 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:19,218 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:19,218 | INFO | src.pipelines.dataset_pipeline | Saved document (id=663b8eb9-eafb-4351-9521-8a02ed4f6347, title='Python - Glossary | MDN')
+2026-07-21 23:57:19,218 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://codehs.com/textbook/intropython_textbook/
+2026-07-21 23:57:19,220 | INFO | src.collectors.docs_collector | Collecting document from https://codehs.com/textbook/intropython_textbook/
+2026-07-21 23:57:19,707 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:19,751 | INFO | src.collectors.docs_collector | Document created successfully (id=9a33c99a-85e3-42e1-8eec-4189be3c7b83)
+2026-07-21 23:57:19,754 | INFO | src.cleaners.document_cleaner | Cleaning document (id=9a33c99a-85e3-42e1-8eec-4189be3c7b83)
+2026-07-21 23:57:19,754 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=9a33c99a-85e3-42e1-8eec-4189be3c7b83)
+2026-07-21 23:57:19,754 | INFO | src.validator.document_validator | Validating document (id=9a33c99a-85e3-42e1-8eec-4189be3c7b83)
+2026-07-21 23:57:19,754 | INFO | src.enrichers.document_enricher | Enriching document (id=9a33c99a-85e3-42e1-8eec-4189be3c7b83)
+2026-07-21 23:57:19,754 | INFO | src.enrichers.document_enricher | Enrichment completed (id=9a33c99a-85e3-42e1-8eec-4189be3c7b83, words=105, chars=658, quality=0.50)
+2026-07-21 23:57:19,754 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:19,754 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:19,754 | INFO | src.pipelines.dataset_pipeline | Saved document (id=9a33c99a-85e3-42e1-8eec-4189be3c7b83, title='Textbook: Intro to Python Textbook | CodeHS')
+2026-07-21 23:57:19,754 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://coddy.tech/docs/python/input-and-print
+2026-07-21 23:57:19,754 | INFO | src.collectors.docs_collector | Collecting document from https://coddy.tech/docs/python/input-and-print
+2026-07-21 23:57:19,838 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:19,870 | INFO | src.collectors.docs_collector | Document created successfully (id=a5631838-c102-47b6-95c5-e11173b99e7b)
+2026-07-21 23:57:19,871 | INFO | src.cleaners.document_cleaner | Cleaning document (id=a5631838-c102-47b6-95c5-e11173b99e7b)
+2026-07-21 23:57:19,871 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=a5631838-c102-47b6-95c5-e11173b99e7b)
+2026-07-21 23:57:19,872 | INFO | src.validator.document_validator | Validating document (id=a5631838-c102-47b6-95c5-e11173b99e7b)
+2026-07-21 23:57:19,872 | INFO | src.enrichers.document_enricher | Enriching document (id=a5631838-c102-47b6-95c5-e11173b99e7b)
+2026-07-21 23:57:19,872 | INFO | src.enrichers.document_enricher | Enrichment completed (id=a5631838-c102-47b6-95c5-e11173b99e7b, words=742, chars=4361, quality=1.00)
+2026-07-21 23:57:19,872 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:19,873 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:19,873 | INFO | src.pipelines.dataset_pipeline | Saved document (id=a5631838-c102-47b6-95c5-e11173b99e7b, title='Runnable Python Docs: Input & Print | Coddy')
+2026-07-21 23:57:26,170 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://docs.python.org/3/tutorial/
+2026-07-21 23:57:26,170 | INFO | src.collectors.docs_collector | Collecting document from https://docs.python.org/3/tutorial/
+2026-07-21 23:57:26,552 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:26,572 | INFO | src.collectors.docs_collector | Document created successfully (id=3f409e2f-dbc5-4164-a99a-43e2b5f3cf35)
+2026-07-21 23:57:26,573 | INFO | src.cleaners.document_cleaner | Cleaning document (id=3f409e2f-dbc5-4164-a99a-43e2b5f3cf35)
+2026-07-21 23:57:26,574 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=3f409e2f-dbc5-4164-a99a-43e2b5f3cf35)
+2026-07-21 23:57:26,574 | INFO | src.validator.document_validator | Validating document (id=3f409e2f-dbc5-4164-a99a-43e2b5f3cf35)
+2026-07-21 23:57:26,574 | INFO | src.enrichers.document_enricher | Enriching document (id=3f409e2f-dbc5-4164-a99a-43e2b5f3cf35)
+2026-07-21 23:57:26,574 | INFO | src.enrichers.document_enricher | Enrichment completed (id=3f409e2f-dbc5-4164-a99a-43e2b5f3cf35, words=363, chars=2325, quality=0.50)
+2026-07-21 23:57:26,574 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:26,575 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:26,575 | INFO | src.pipelines.dataset_pipeline | Saved document (id=3f409e2f-dbc5-4164-a99a-43e2b5f3cf35, title='The Python Tutorial — Python 3.14.6 documentation')
+2026-07-21 23:57:26,575 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://www.programiz.com/python-programming
+2026-07-21 23:57:26,575 | INFO | src.collectors.docs_collector | Collecting document from https://www.programiz.com/python-programming
+2026-07-21 23:57:26,964 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:27,003 | INFO | src.collectors.docs_collector | Document created successfully (id=cd45d298-431f-4c36-a918-01912b754d5e)
+2026-07-21 23:57:27,005 | INFO | src.cleaners.document_cleaner | Cleaning document (id=cd45d298-431f-4c36-a918-01912b754d5e)
+2026-07-21 23:57:27,005 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=cd45d298-431f-4c36-a918-01912b754d5e)
+2026-07-21 23:57:27,005 | INFO | src.validator.document_validator | Validating document (id=cd45d298-431f-4c36-a918-01912b754d5e)
+2026-07-21 23:57:27,005 | INFO | src.enrichers.document_enricher | Enriching document (id=cd45d298-431f-4c36-a918-01912b754d5e)
+2026-07-21 23:57:27,005 | INFO | src.enrichers.document_enricher | Enrichment completed (id=cd45d298-431f-4c36-a918-01912b754d5e, words=1061, chars=6769, quality=1.00)
+2026-07-21 23:57:27,006 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:27,006 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:27,007 | INFO | src.pipelines.dataset_pipeline | Saved document (id=cd45d298-431f-4c36-a918-01912b754d5e, title='Learn Python Programming')
+2026-07-21 23:57:27,007 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-21 23:57:27,007 | INFO | src.collectors.docs_collector | Collecting document from https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-21 23:57:27,152 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:27,224 | INFO | src.collectors.docs_collector | Document created successfully (id=b27a8d4c-c754-4f65-ad97-a06f5be5a2d8)
+2026-07-21 23:57:27,226 | INFO | src.cleaners.document_cleaner | Cleaning document (id=b27a8d4c-c754-4f65-ad97-a06f5be5a2d8)
+2026-07-21 23:57:27,226 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=b27a8d4c-c754-4f65-ad97-a06f5be5a2d8)
+2026-07-21 23:57:27,226 | INFO | src.validator.document_validator | Validating document (id=b27a8d4c-c754-4f65-ad97-a06f5be5a2d8)
+2026-07-21 23:57:27,226 | INFO | src.enrichers.document_enricher | Enriching document (id=b27a8d4c-c754-4f65-ad97-a06f5be5a2d8)
+2026-07-21 23:57:27,227 | INFO | src.enrichers.document_enricher | Enrichment completed (id=b27a8d4c-c754-4f65-ad97-a06f5be5a2d8, words=152, chars=1067, quality=0.50)
+2026-07-21 23:57:27,227 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:27,228 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:27,228 | INFO | src.pipelines.dataset_pipeline | Saved document (id=b27a8d4c-c754-4f65-ad97-a06f5be5a2d8, title='Python - Glossary | MDN')
+2026-07-21 23:57:27,229 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://codehs.com/textbook/intropython_textbook/
+2026-07-21 23:57:27,229 | INFO | src.collectors.docs_collector | Collecting document from https://codehs.com/textbook/intropython_textbook/
+2026-07-21 23:57:27,703 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:27,757 | INFO | src.collectors.docs_collector | Document created successfully (id=f414b520-f704-4fba-be3a-14c3f20bed21)
+2026-07-21 23:57:27,758 | INFO | src.cleaners.document_cleaner | Cleaning document (id=f414b520-f704-4fba-be3a-14c3f20bed21)
+2026-07-21 23:57:27,758 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=f414b520-f704-4fba-be3a-14c3f20bed21)
+2026-07-21 23:57:27,759 | INFO | src.validator.document_validator | Validating document (id=f414b520-f704-4fba-be3a-14c3f20bed21)
+2026-07-21 23:57:27,759 | INFO | src.enrichers.document_enricher | Enriching document (id=f414b520-f704-4fba-be3a-14c3f20bed21)
+2026-07-21 23:57:27,759 | INFO | src.enrichers.document_enricher | Enrichment completed (id=f414b520-f704-4fba-be3a-14c3f20bed21, words=105, chars=658, quality=0.50)
+2026-07-21 23:57:27,759 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:27,760 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:27,760 | INFO | src.pipelines.dataset_pipeline | Saved document (id=f414b520-f704-4fba-be3a-14c3f20bed21, title='Textbook: Intro to Python Textbook | CodeHS')
+2026-07-21 23:57:27,760 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://coddy.tech/docs/python/input-and-print
+2026-07-21 23:57:27,760 | INFO | src.collectors.docs_collector | Collecting document from https://coddy.tech/docs/python/input-and-print
+2026-07-21 23:57:27,835 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-21 23:57:27,870 | INFO | src.collectors.docs_collector | Document created successfully (id=c3868a61-98ad-49a8-9b2e-bd00b87e9157)
+2026-07-21 23:57:27,872 | INFO | src.cleaners.document_cleaner | Cleaning document (id=c3868a61-98ad-49a8-9b2e-bd00b87e9157)
+2026-07-21 23:57:27,873 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=c3868a61-98ad-49a8-9b2e-bd00b87e9157)
+2026-07-21 23:57:27,873 | INFO | src.validator.document_validator | Validating document (id=c3868a61-98ad-49a8-9b2e-bd00b87e9157)
+2026-07-21 23:57:27,873 | INFO | src.enrichers.document_enricher | Enriching document (id=c3868a61-98ad-49a8-9b2e-bd00b87e9157)
+2026-07-21 23:57:27,873 | INFO | src.enrichers.document_enricher | Enrichment completed (id=c3868a61-98ad-49a8-9b2e-bd00b87e9157, words=742, chars=4361, quality=1.00)
+2026-07-21 23:57:27,873 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-21 23:57:27,874 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-21 23:57:27,874 | INFO | src.pipelines.dataset_pipeline | Saved document (id=c3868a61-98ad-49a8-9b2e-bd00b87e9157, title='Runnable Python Docs: Input & Print | Coddy')
+2026-07-22 01:08:08,893 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:08:08,895 | INFO | src.storage.jsonl_store | Loaded 15 objects
+2026-07-22 01:08:39,053 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:08:39,055 | INFO | src.storage.jsonl_store | Loaded 15 objects
+2026-07-22 01:10:47,006 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:10:47,007 | INFO | src.storage.jsonl_store | Loaded 15 objects
+2026-07-22 01:10:47,008 | INFO | src.storage.jsonl_store | Saving 15 objects
+2026-07-22 01:10:47,008 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,009 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,009 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,010 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,010 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,011 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,011 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,011 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,011 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,012 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,012 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,012 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,013 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,013 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,013 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,013 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,015 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,015 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,015 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,015 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,016 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,016 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,016 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,017 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,017 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,017 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,017 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,018 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,018 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:10:47,018 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:10:47,018 | INFO | src.storage.jsonl_store | Finished saving 15 objects
+2026-07-22 01:10:47,018 | INFO | src.storage.jsonl_store | Replacing all records in data/raw/documents.jsonl
+2026-07-22 01:10:47,019 | INFO | src.storage.jsonl_store | Successfully replaced dataset with 5 objects
+2026-07-22 01:11:16,302 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:11:16,317 | INFO | src.storage.jsonl_store | Loaded 5 objects
+2026-07-22 01:11:16,318 | INFO | src.storage.jsonl_store | Saving 5 objects
+2026-07-22 01:11:16,318 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:11:16,319 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:11:16,319 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:11:16,320 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:11:16,320 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:11:16,321 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:11:16,321 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:11:16,321 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:11:16,322 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:11:16,322 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:11:16,322 | INFO | src.storage.jsonl_store | Finished saving 5 objects
+2026-07-22 01:11:16,322 | INFO | src.storage.jsonl_store | Replacing all records in data/raw/documents.jsonl
+2026-07-22 01:11:16,322 | INFO | src.storage.jsonl_store | Successfully replaced dataset with 0 objects
+2026-07-22 01:11:18,573 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:11:18,573 | INFO | src.storage.jsonl_store | Loaded 0 objects
+2026-07-22 01:11:18,575 | INFO | src.storage.jsonl_store | Saving 0 objects
+2026-07-22 01:11:18,575 | INFO | src.storage.jsonl_store | Finished saving 0 objects
+2026-07-22 01:11:18,575 | INFO | src.storage.jsonl_store | Replacing all records in data/raw/documents.jsonl
+2026-07-22 01:11:18,576 | INFO | src.storage.jsonl_store | Successfully replaced dataset with 0 objects
+2026-07-22 01:11:19,572 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:11:19,573 | INFO | src.storage.jsonl_store | Loaded 0 objects
+2026-07-22 01:11:19,574 | INFO | src.storage.jsonl_store | Saving 0 objects
+2026-07-22 01:11:19,574 | INFO | src.storage.jsonl_store | Finished saving 0 objects
+2026-07-22 01:11:19,575 | INFO | src.storage.jsonl_store | Replacing all records in data/raw/documents.jsonl
+2026-07-22 01:11:19,575 | INFO | src.storage.jsonl_store | Successfully replaced dataset with 0 objects
+2026-07-22 01:11:20,269 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:11:20,269 | INFO | src.storage.jsonl_store | Loaded 0 objects
+2026-07-22 01:11:20,270 | INFO | src.storage.jsonl_store | Saving 0 objects
+2026-07-22 01:11:20,270 | INFO | src.storage.jsonl_store | Finished saving 0 objects
+2026-07-22 01:11:20,270 | INFO | src.storage.jsonl_store | Replacing all records in data/raw/documents.jsonl
+2026-07-22 01:11:20,271 | INFO | src.storage.jsonl_store | Successfully replaced dataset with 0 objects
+2026-07-22 01:11:21,092 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:11:21,093 | INFO | src.storage.jsonl_store | Loaded 0 objects
+2026-07-22 01:11:21,094 | INFO | src.storage.jsonl_store | Saving 0 objects
+2026-07-22 01:11:21,094 | INFO | src.storage.jsonl_store | Finished saving 0 objects
+2026-07-22 01:11:21,094 | INFO | src.storage.jsonl_store | Replacing all records in data/raw/documents.jsonl
+2026-07-22 01:11:21,095 | INFO | src.storage.jsonl_store | Successfully replaced dataset with 0 objects
+2026-07-22 01:16:51,253 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:16:51,253 | INFO | src.storage.jsonl_store | Loaded 0 objects
+2026-07-22 01:18:05,622 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://docs.python.org/3/tutorial/
+2026-07-22 01:18:05,622 | INFO | src.collectors.docs_collector | Collecting document from https://docs.python.org/3/tutorial/
+2026-07-22 01:18:05,975 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:18:06,016 | INFO | src.collectors.docs_collector | Document created successfully (id=6efeb3d8-8cf7-4a93-85bb-79e69d03d394)
+2026-07-22 01:18:06,020 | INFO | src.cleaners.document_cleaner | Cleaning document (id=6efeb3d8-8cf7-4a93-85bb-79e69d03d394)
+2026-07-22 01:18:06,020 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=6efeb3d8-8cf7-4a93-85bb-79e69d03d394)
+2026-07-22 01:18:06,020 | INFO | src.validator.document_validator | Validating document (id=6efeb3d8-8cf7-4a93-85bb-79e69d03d394)
+2026-07-22 01:18:06,020 | INFO | src.enrichers.document_enricher | Enriching document (id=6efeb3d8-8cf7-4a93-85bb-79e69d03d394)
+2026-07-22 01:18:06,020 | INFO | src.enrichers.document_enricher | Enrichment completed (id=6efeb3d8-8cf7-4a93-85bb-79e69d03d394, words=363, chars=2325, quality=0.50)
+2026-07-22 01:18:06,020 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:18:06,022 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:06,022 | INFO | src.pipelines.dataset_pipeline | Saved document (id=6efeb3d8-8cf7-4a93-85bb-79e69d03d394, title='The Python Tutorial — Python 3.14.6 documentation')
+2026-07-22 01:18:06,022 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://www.programiz.com/python-programming
+2026-07-22 01:18:06,022 | INFO | src.collectors.docs_collector | Collecting document from https://www.programiz.com/python-programming
+2026-07-22 01:18:06,450 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:18:06,483 | INFO | src.collectors.docs_collector | Document created successfully (id=fb132096-b980-4e33-bc35-6b878456330f)
+2026-07-22 01:18:06,483 | INFO | src.cleaners.document_cleaner | Cleaning document (id=fb132096-b980-4e33-bc35-6b878456330f)
+2026-07-22 01:18:06,483 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=fb132096-b980-4e33-bc35-6b878456330f)
+2026-07-22 01:18:06,483 | INFO | src.validator.document_validator | Validating document (id=fb132096-b980-4e33-bc35-6b878456330f)
+2026-07-22 01:18:06,483 | INFO | src.enrichers.document_enricher | Enriching document (id=fb132096-b980-4e33-bc35-6b878456330f)
+2026-07-22 01:18:06,483 | INFO | src.enrichers.document_enricher | Enrichment completed (id=fb132096-b980-4e33-bc35-6b878456330f, words=1061, chars=6769, quality=1.00)
+2026-07-22 01:18:06,483 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:18:06,483 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:06,483 | INFO | src.pipelines.dataset_pipeline | Saved document (id=fb132096-b980-4e33-bc35-6b878456330f, title='Learn Python Programming')
+2026-07-22 01:18:06,483 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-22 01:18:06,483 | INFO | src.collectors.docs_collector | Collecting document from https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-22 01:18:06,882 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:18:06,932 | INFO | src.collectors.docs_collector | Document created successfully (id=a0be9fbe-0654-446b-a928-dfc340f74a20)
+2026-07-22 01:18:06,932 | INFO | src.cleaners.document_cleaner | Cleaning document (id=a0be9fbe-0654-446b-a928-dfc340f74a20)
+2026-07-22 01:18:06,932 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=a0be9fbe-0654-446b-a928-dfc340f74a20)
+2026-07-22 01:18:06,942 | INFO | src.validator.document_validator | Validating document (id=a0be9fbe-0654-446b-a928-dfc340f74a20)
+2026-07-22 01:18:06,942 | INFO | src.enrichers.document_enricher | Enriching document (id=a0be9fbe-0654-446b-a928-dfc340f74a20)
+2026-07-22 01:18:06,942 | INFO | src.enrichers.document_enricher | Enrichment completed (id=a0be9fbe-0654-446b-a928-dfc340f74a20, words=152, chars=1067, quality=0.50)
+2026-07-22 01:18:06,942 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:18:06,942 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:06,944 | INFO | src.pipelines.dataset_pipeline | Saved document (id=a0be9fbe-0654-446b-a928-dfc340f74a20, title='Python - Glossary | MDN')
+2026-07-22 01:18:06,944 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://codehs.com/textbook/intropython_textbook/
+2026-07-22 01:18:06,944 | INFO | src.collectors.docs_collector | Collecting document from https://codehs.com/textbook/intropython_textbook/
+2026-07-22 01:18:07,403 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:18:07,592 | INFO | src.collectors.docs_collector | Document created successfully (id=4754f7d0-1527-4560-ac19-1cb5064a5762)
+2026-07-22 01:18:07,592 | INFO | src.cleaners.document_cleaner | Cleaning document (id=4754f7d0-1527-4560-ac19-1cb5064a5762)
+2026-07-22 01:18:07,592 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=4754f7d0-1527-4560-ac19-1cb5064a5762)
+2026-07-22 01:18:07,592 | INFO | src.validator.document_validator | Validating document (id=4754f7d0-1527-4560-ac19-1cb5064a5762)
+2026-07-22 01:18:07,592 | INFO | src.enrichers.document_enricher | Enriching document (id=4754f7d0-1527-4560-ac19-1cb5064a5762)
+2026-07-22 01:18:07,592 | INFO | src.enrichers.document_enricher | Enrichment completed (id=4754f7d0-1527-4560-ac19-1cb5064a5762, words=105, chars=658, quality=0.50)
+2026-07-22 01:18:07,592 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:18:07,592 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:07,598 | INFO | src.pipelines.dataset_pipeline | Saved document (id=4754f7d0-1527-4560-ac19-1cb5064a5762, title='Textbook: Intro to Python Textbook | CodeHS')
+2026-07-22 01:18:07,599 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://coddy.tech/docs/python/input-and-print
+2026-07-22 01:18:07,599 | INFO | src.collectors.docs_collector | Collecting document from https://coddy.tech/docs/python/input-and-print
+2026-07-22 01:18:08,164 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:18:08,202 | INFO | src.collectors.docs_collector | Document created successfully (id=d55e6b7e-2557-4382-a1d7-979487172092)
+2026-07-22 01:18:08,202 | INFO | src.cleaners.document_cleaner | Cleaning document (id=d55e6b7e-2557-4382-a1d7-979487172092)
+2026-07-22 01:18:08,202 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=d55e6b7e-2557-4382-a1d7-979487172092)
+2026-07-22 01:18:08,202 | INFO | src.validator.document_validator | Validating document (id=d55e6b7e-2557-4382-a1d7-979487172092)
+2026-07-22 01:18:08,202 | INFO | src.enrichers.document_enricher | Enriching document (id=d55e6b7e-2557-4382-a1d7-979487172092)
+2026-07-22 01:18:08,202 | INFO | src.enrichers.document_enricher | Enrichment completed (id=d55e6b7e-2557-4382-a1d7-979487172092, words=742, chars=4361, quality=1.00)
+2026-07-22 01:18:08,202 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:18:08,202 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:08,202 | INFO | src.pipelines.dataset_pipeline | Saved document (id=d55e6b7e-2557-4382-a1d7-979487172092, title='Runnable Python Docs: Input & Print | Coddy')
+2026-07-22 01:18:10,923 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:18:10,942 | INFO | src.storage.jsonl_store | Loaded 5 objects
+2026-07-22 01:18:46,178 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://docs.python.org/3/tutorial/
+2026-07-22 01:18:46,178 | INFO | src.collectors.docs_collector | Collecting document from https://docs.python.org/3/tutorial/
+2026-07-22 01:18:46,241 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:18:46,256 | INFO | src.collectors.docs_collector | Document created successfully (id=f0385dd5-7136-44a0-99b2-fef00c1d4e92)
+2026-07-22 01:18:46,258 | INFO | src.cleaners.document_cleaner | Cleaning document (id=f0385dd5-7136-44a0-99b2-fef00c1d4e92)
+2026-07-22 01:18:46,258 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=f0385dd5-7136-44a0-99b2-fef00c1d4e92)
+2026-07-22 01:18:46,258 | INFO | src.validator.document_validator | Validating document (id=f0385dd5-7136-44a0-99b2-fef00c1d4e92)
+2026-07-22 01:18:46,258 | INFO | src.enrichers.document_enricher | Enriching document (id=f0385dd5-7136-44a0-99b2-fef00c1d4e92)
+2026-07-22 01:18:46,258 | INFO | src.enrichers.document_enricher | Enrichment completed (id=f0385dd5-7136-44a0-99b2-fef00c1d4e92, words=363, chars=2325, quality=0.50)
+2026-07-22 01:18:46,258 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:18:46,259 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:46,259 | INFO | src.pipelines.dataset_pipeline | Saved document (id=f0385dd5-7136-44a0-99b2-fef00c1d4e92, title='The Python Tutorial — Python 3.14.6 documentation')
+2026-07-22 01:18:46,259 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://www.programiz.com/python-programming
+2026-07-22 01:18:46,259 | INFO | src.collectors.docs_collector | Collecting document from https://www.programiz.com/python-programming
+2026-07-22 01:18:46,650 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:18:46,687 | INFO | src.collectors.docs_collector | Document created successfully (id=091de9ce-d2cd-48a2-b5e6-e834f27c6299)
+2026-07-22 01:18:46,689 | INFO | src.cleaners.document_cleaner | Cleaning document (id=091de9ce-d2cd-48a2-b5e6-e834f27c6299)
+2026-07-22 01:18:46,689 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=091de9ce-d2cd-48a2-b5e6-e834f27c6299)
+2026-07-22 01:18:46,689 | INFO | src.validator.document_validator | Validating document (id=091de9ce-d2cd-48a2-b5e6-e834f27c6299)
+2026-07-22 01:18:46,689 | INFO | src.enrichers.document_enricher | Enriching document (id=091de9ce-d2cd-48a2-b5e6-e834f27c6299)
+2026-07-22 01:18:46,690 | INFO | src.enrichers.document_enricher | Enrichment completed (id=091de9ce-d2cd-48a2-b5e6-e834f27c6299, words=1061, chars=6769, quality=1.00)
+2026-07-22 01:18:46,690 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:18:46,691 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:46,691 | INFO | src.pipelines.dataset_pipeline | Saved document (id=091de9ce-d2cd-48a2-b5e6-e834f27c6299, title='Learn Python Programming')
+2026-07-22 01:18:46,691 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-22 01:18:46,691 | INFO | src.collectors.docs_collector | Collecting document from https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-22 01:18:46,762 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:18:46,810 | INFO | src.collectors.docs_collector | Document created successfully (id=0eb93d67-b469-4b26-8b55-519d53101109)
+2026-07-22 01:18:46,812 | INFO | src.cleaners.document_cleaner | Cleaning document (id=0eb93d67-b469-4b26-8b55-519d53101109)
+2026-07-22 01:18:46,812 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=0eb93d67-b469-4b26-8b55-519d53101109)
+2026-07-22 01:18:46,812 | INFO | src.validator.document_validator | Validating document (id=0eb93d67-b469-4b26-8b55-519d53101109)
+2026-07-22 01:18:46,812 | INFO | src.enrichers.document_enricher | Enriching document (id=0eb93d67-b469-4b26-8b55-519d53101109)
+2026-07-22 01:18:46,812 | INFO | src.enrichers.document_enricher | Enrichment completed (id=0eb93d67-b469-4b26-8b55-519d53101109, words=152, chars=1067, quality=0.50)
+2026-07-22 01:18:46,812 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:18:46,813 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:46,813 | INFO | src.pipelines.dataset_pipeline | Saved document (id=0eb93d67-b469-4b26-8b55-519d53101109, title='Python - Glossary | MDN')
+2026-07-22 01:18:46,813 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://codehs.com/textbook/intropython_textbook/
+2026-07-22 01:18:46,813 | INFO | src.collectors.docs_collector | Collecting document from https://codehs.com/textbook/intropython_textbook/
+2026-07-22 01:18:47,226 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:18:47,283 | INFO | src.collectors.docs_collector | Document created successfully (id=607f0fbe-deab-42ce-89f2-f447a703066d)
+2026-07-22 01:18:47,284 | INFO | src.cleaners.document_cleaner | Cleaning document (id=607f0fbe-deab-42ce-89f2-f447a703066d)
+2026-07-22 01:18:47,284 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=607f0fbe-deab-42ce-89f2-f447a703066d)
+2026-07-22 01:18:47,285 | INFO | src.validator.document_validator | Validating document (id=607f0fbe-deab-42ce-89f2-f447a703066d)
+2026-07-22 01:18:47,285 | INFO | src.enrichers.document_enricher | Enriching document (id=607f0fbe-deab-42ce-89f2-f447a703066d)
+2026-07-22 01:18:47,285 | INFO | src.enrichers.document_enricher | Enrichment completed (id=607f0fbe-deab-42ce-89f2-f447a703066d, words=105, chars=658, quality=0.50)
+2026-07-22 01:18:47,285 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:18:47,285 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:47,285 | INFO | src.pipelines.dataset_pipeline | Saved document (id=607f0fbe-deab-42ce-89f2-f447a703066d, title='Textbook: Intro to Python Textbook | CodeHS')
+2026-07-22 01:18:47,287 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://coddy.tech/docs/python/input-and-print
+2026-07-22 01:18:47,287 | INFO | src.collectors.docs_collector | Collecting document from https://coddy.tech/docs/python/input-and-print
+2026-07-22 01:18:47,349 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:18:47,388 | INFO | src.collectors.docs_collector | Document created successfully (id=ee21cc65-b727-4c2e-98d0-bdb6fe82fed7)
+2026-07-22 01:18:47,390 | INFO | src.cleaners.document_cleaner | Cleaning document (id=ee21cc65-b727-4c2e-98d0-bdb6fe82fed7)
+2026-07-22 01:18:47,390 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=ee21cc65-b727-4c2e-98d0-bdb6fe82fed7)
+2026-07-22 01:18:47,390 | INFO | src.validator.document_validator | Validating document (id=ee21cc65-b727-4c2e-98d0-bdb6fe82fed7)
+2026-07-22 01:18:47,390 | INFO | src.enrichers.document_enricher | Enriching document (id=ee21cc65-b727-4c2e-98d0-bdb6fe82fed7)
+2026-07-22 01:18:47,390 | INFO | src.enrichers.document_enricher | Enrichment completed (id=ee21cc65-b727-4c2e-98d0-bdb6fe82fed7, words=742, chars=4361, quality=1.00)
+2026-07-22 01:18:47,391 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:18:47,392 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:47,392 | INFO | src.pipelines.dataset_pipeline | Saved document (id=ee21cc65-b727-4c2e-98d0-bdb6fe82fed7, title='Runnable Python Docs: Input & Print | Coddy')
+2026-07-22 01:18:52,755 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:18:52,756 | INFO | src.storage.jsonl_store | Loaded 10 objects
+2026-07-22 01:18:52,756 | INFO | src.storage.jsonl_store | Saving 10 objects
+2026-07-22 01:18:52,756 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:18:52,759 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:52,759 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:18:52,760 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:52,760 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:18:52,760 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:52,760 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:18:52,760 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:52,762 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:18:52,762 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:52,762 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:18:52,762 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:52,763 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:18:52,763 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:52,763 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:18:52,764 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:52,764 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:18:52,764 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:52,765 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:18:52,765 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:18:52,765 | INFO | src.storage.jsonl_store | Finished saving 10 objects
+2026-07-22 01:18:52,765 | INFO | src.storage.jsonl_store | Replacing all records in data/raw/documents.jsonl
+2026-07-22 01:18:52,766 | INFO | src.storage.jsonl_store | Successfully replaced dataset with 5 objects
+2026-07-22 01:19:25,634 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://docs.python.org/3/tutorial/
+2026-07-22 01:19:25,635 | INFO | src.collectors.docs_collector | Collecting document from https://docs.python.org/3/tutorial/
+2026-07-22 01:19:25,746 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:19:25,762 | INFO | src.collectors.docs_collector | Document created successfully (id=25b7f071-af0c-4b54-9511-ed408955c1ed)
+2026-07-22 01:19:25,763 | INFO | src.cleaners.document_cleaner | Cleaning document (id=25b7f071-af0c-4b54-9511-ed408955c1ed)
+2026-07-22 01:19:25,764 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=25b7f071-af0c-4b54-9511-ed408955c1ed)
+2026-07-22 01:19:25,764 | INFO | src.validator.document_validator | Validating document (id=25b7f071-af0c-4b54-9511-ed408955c1ed)
+2026-07-22 01:19:25,764 | INFO | src.enrichers.document_enricher | Enriching document (id=25b7f071-af0c-4b54-9511-ed408955c1ed)
+2026-07-22 01:19:25,764 | INFO | src.enrichers.document_enricher | Enrichment completed (id=25b7f071-af0c-4b54-9511-ed408955c1ed, words=363, chars=2325, quality=0.50)
+2026-07-22 01:19:25,764 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:19:25,765 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:25,765 | INFO | src.pipelines.dataset_pipeline | Saved document (id=25b7f071-af0c-4b54-9511-ed408955c1ed, title='The Python Tutorial — Python 3.14.6 documentation')
+2026-07-22 01:19:25,765 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://www.programiz.com/python-programming
+2026-07-22 01:19:25,765 | INFO | src.collectors.docs_collector | Collecting document from https://www.programiz.com/python-programming
+2026-07-22 01:19:26,139 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:19:26,178 | INFO | src.collectors.docs_collector | Document created successfully (id=c1432f78-e29c-4a55-8f65-94dd1b0009e3)
+2026-07-22 01:19:26,180 | INFO | src.cleaners.document_cleaner | Cleaning document (id=c1432f78-e29c-4a55-8f65-94dd1b0009e3)
+2026-07-22 01:19:26,180 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=c1432f78-e29c-4a55-8f65-94dd1b0009e3)
+2026-07-22 01:19:26,180 | INFO | src.validator.document_validator | Validating document (id=c1432f78-e29c-4a55-8f65-94dd1b0009e3)
+2026-07-22 01:19:26,180 | INFO | src.enrichers.document_enricher | Enriching document (id=c1432f78-e29c-4a55-8f65-94dd1b0009e3)
+2026-07-22 01:19:26,181 | INFO | src.enrichers.document_enricher | Enrichment completed (id=c1432f78-e29c-4a55-8f65-94dd1b0009e3, words=1061, chars=6769, quality=1.00)
+2026-07-22 01:19:26,181 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:19:26,182 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:26,182 | INFO | src.pipelines.dataset_pipeline | Saved document (id=c1432f78-e29c-4a55-8f65-94dd1b0009e3, title='Learn Python Programming')
+2026-07-22 01:19:26,182 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-22 01:19:26,182 | INFO | src.collectors.docs_collector | Collecting document from https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-22 01:19:26,327 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:19:26,387 | INFO | src.collectors.docs_collector | Document created successfully (id=4fce6c88-f8d1-40c8-a9bd-8d2cb728392a)
+2026-07-22 01:19:26,388 | INFO | src.cleaners.document_cleaner | Cleaning document (id=4fce6c88-f8d1-40c8-a9bd-8d2cb728392a)
+2026-07-22 01:19:26,388 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=4fce6c88-f8d1-40c8-a9bd-8d2cb728392a)
+2026-07-22 01:19:26,388 | INFO | src.validator.document_validator | Validating document (id=4fce6c88-f8d1-40c8-a9bd-8d2cb728392a)
+2026-07-22 01:19:26,388 | INFO | src.enrichers.document_enricher | Enriching document (id=4fce6c88-f8d1-40c8-a9bd-8d2cb728392a)
+2026-07-22 01:19:26,388 | INFO | src.enrichers.document_enricher | Enrichment completed (id=4fce6c88-f8d1-40c8-a9bd-8d2cb728392a, words=152, chars=1067, quality=0.50)
+2026-07-22 01:19:26,388 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:19:26,389 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:26,389 | INFO | src.pipelines.dataset_pipeline | Saved document (id=4fce6c88-f8d1-40c8-a9bd-8d2cb728392a, title='Python - Glossary | MDN')
+2026-07-22 01:19:26,389 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://codehs.com/textbook/intropython_textbook/
+2026-07-22 01:19:26,389 | INFO | src.collectors.docs_collector | Collecting document from https://codehs.com/textbook/intropython_textbook/
+2026-07-22 01:19:26,977 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:19:27,027 | INFO | src.collectors.docs_collector | Document created successfully (id=206b8117-0107-4cc4-bd43-489875f6d4fa)
+2026-07-22 01:19:27,042 | INFO | src.cleaners.document_cleaner | Cleaning document (id=206b8117-0107-4cc4-bd43-489875f6d4fa)
+2026-07-22 01:19:27,059 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=206b8117-0107-4cc4-bd43-489875f6d4fa)
+2026-07-22 01:19:27,063 | INFO | src.validator.document_validator | Validating document (id=206b8117-0107-4cc4-bd43-489875f6d4fa)
+2026-07-22 01:19:27,089 | INFO | src.enrichers.document_enricher | Enriching document (id=206b8117-0107-4cc4-bd43-489875f6d4fa)
+2026-07-22 01:19:27,100 | INFO | src.enrichers.document_enricher | Enrichment completed (id=206b8117-0107-4cc4-bd43-489875f6d4fa, words=105, chars=658, quality=0.50)
+2026-07-22 01:19:27,100 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:19:27,102 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:27,102 | INFO | src.pipelines.dataset_pipeline | Saved document (id=206b8117-0107-4cc4-bd43-489875f6d4fa, title='Textbook: Intro to Python Textbook | CodeHS')
+2026-07-22 01:19:27,112 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://coddy.tech/docs/python/input-and-print
+2026-07-22 01:19:27,118 | INFO | src.collectors.docs_collector | Collecting document from https://coddy.tech/docs/python/input-and-print
+2026-07-22 01:19:28,239 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:19:28,272 | INFO | src.collectors.docs_collector | Document created successfully (id=39e92260-a4d6-41cb-98bd-2f67e6220636)
+2026-07-22 01:19:28,275 | INFO | src.cleaners.document_cleaner | Cleaning document (id=39e92260-a4d6-41cb-98bd-2f67e6220636)
+2026-07-22 01:19:28,275 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=39e92260-a4d6-41cb-98bd-2f67e6220636)
+2026-07-22 01:19:28,275 | INFO | src.validator.document_validator | Validating document (id=39e92260-a4d6-41cb-98bd-2f67e6220636)
+2026-07-22 01:19:28,275 | INFO | src.enrichers.document_enricher | Enriching document (id=39e92260-a4d6-41cb-98bd-2f67e6220636)
+2026-07-22 01:19:28,275 | INFO | src.enrichers.document_enricher | Enrichment completed (id=39e92260-a4d6-41cb-98bd-2f67e6220636, words=742, chars=4361, quality=1.00)
+2026-07-22 01:19:28,275 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:19:28,276 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:28,276 | INFO | src.pipelines.dataset_pipeline | Saved document (id=39e92260-a4d6-41cb-98bd-2f67e6220636, title='Runnable Python Docs: Input & Print | Coddy')
+2026-07-22 01:19:31,402 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:19:31,403 | INFO | src.storage.jsonl_store | Loaded 10 objects
+2026-07-22 01:19:31,404 | INFO | src.storage.jsonl_store | Saving 10 objects
+2026-07-22 01:19:31,404 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:19:31,405 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:31,406 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:19:31,406 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:31,407 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:19:31,407 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:31,407 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:19:31,408 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:31,408 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:19:31,409 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:31,409 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:19:31,409 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:31,409 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:19:31,410 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:31,410 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:19:31,410 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:31,410 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:19:31,412 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:31,412 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_2.jsonl
+2026-07-22 01:19:31,412 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:19:31,412 | INFO | src.storage.jsonl_store | Finished saving 10 objects
+2026-07-22 01:19:31,413 | INFO | src.storage.jsonl_store | Replacing all records in data/raw/documents.jsonl
+2026-07-22 01:19:31,414 | INFO | src.storage.jsonl_store | Successfully replaced dataset with 5 objects
+2026-07-22 01:23:29,904 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://docs.python.org/3/tutorial/
+2026-07-22 01:23:29,905 | INFO | src.collectors.docs_collector | Collecting document from https://docs.python.org/3/tutorial/
+2026-07-22 01:23:30,282 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:23:30,316 | INFO | src.collectors.docs_collector | Document created successfully (id=d05c19a1-9351-4903-a8dd-64bab3e81d90)
+2026-07-22 01:23:30,318 | INFO | src.cleaners.document_cleaner | Cleaning document (id=d05c19a1-9351-4903-a8dd-64bab3e81d90)
+2026-07-22 01:23:30,318 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=d05c19a1-9351-4903-a8dd-64bab3e81d90)
+2026-07-22 01:23:30,318 | INFO | src.validator.document_validator | Validating document (id=d05c19a1-9351-4903-a8dd-64bab3e81d90)
+2026-07-22 01:23:30,319 | INFO | src.enrichers.document_enricher | Enriching document (id=d05c19a1-9351-4903-a8dd-64bab3e81d90)
+2026-07-22 01:23:30,319 | INFO | src.enrichers.document_enricher | Enrichment completed (id=d05c19a1-9351-4903-a8dd-64bab3e81d90, words=363, chars=2325, quality=0.50)
+2026-07-22 01:23:30,319 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:23:30,319 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:30,319 | INFO | src.pipelines.dataset_pipeline | Saved document (id=d05c19a1-9351-4903-a8dd-64bab3e81d90, title='The Python Tutorial — Python 3.14.6 documentation')
+2026-07-22 01:23:30,319 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://www.programiz.com/python-programming
+2026-07-22 01:23:30,319 | INFO | src.collectors.docs_collector | Collecting document from https://www.programiz.com/python-programming
+2026-07-22 01:23:30,715 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:23:30,754 | INFO | src.collectors.docs_collector | Document created successfully (id=d77262d4-e73b-462f-94d5-6e844ce833b8)
+2026-07-22 01:23:30,754 | INFO | src.cleaners.document_cleaner | Cleaning document (id=d77262d4-e73b-462f-94d5-6e844ce833b8)
+2026-07-22 01:23:30,756 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=d77262d4-e73b-462f-94d5-6e844ce833b8)
+2026-07-22 01:23:30,756 | INFO | src.validator.document_validator | Validating document (id=d77262d4-e73b-462f-94d5-6e844ce833b8)
+2026-07-22 01:23:30,756 | INFO | src.enrichers.document_enricher | Enriching document (id=d77262d4-e73b-462f-94d5-6e844ce833b8)
+2026-07-22 01:23:30,756 | INFO | src.enrichers.document_enricher | Enrichment completed (id=d77262d4-e73b-462f-94d5-6e844ce833b8, words=1061, chars=6769, quality=1.00)
+2026-07-22 01:23:30,756 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:23:30,756 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:30,756 | INFO | src.pipelines.dataset_pipeline | Saved document (id=d77262d4-e73b-462f-94d5-6e844ce833b8, title='Learn Python Programming')
+2026-07-22 01:23:30,756 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-22 01:23:30,756 | INFO | src.collectors.docs_collector | Collecting document from https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-22 01:23:30,887 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:23:30,940 | INFO | src.collectors.docs_collector | Document created successfully (id=73857c7d-4cba-41b8-be91-ab7f0397c623)
+2026-07-22 01:23:30,941 | INFO | src.cleaners.document_cleaner | Cleaning document (id=73857c7d-4cba-41b8-be91-ab7f0397c623)
+2026-07-22 01:23:30,941 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=73857c7d-4cba-41b8-be91-ab7f0397c623)
+2026-07-22 01:23:30,941 | INFO | src.validator.document_validator | Validating document (id=73857c7d-4cba-41b8-be91-ab7f0397c623)
+2026-07-22 01:23:30,941 | INFO | src.enrichers.document_enricher | Enriching document (id=73857c7d-4cba-41b8-be91-ab7f0397c623)
+2026-07-22 01:23:30,941 | INFO | src.enrichers.document_enricher | Enrichment completed (id=73857c7d-4cba-41b8-be91-ab7f0397c623, words=152, chars=1067, quality=0.50)
+2026-07-22 01:23:30,941 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:23:30,942 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:30,942 | INFO | src.pipelines.dataset_pipeline | Saved document (id=73857c7d-4cba-41b8-be91-ab7f0397c623, title='Python - Glossary | MDN')
+2026-07-22 01:23:30,942 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://codehs.com/textbook/intropython_textbook/
+2026-07-22 01:23:30,942 | INFO | src.collectors.docs_collector | Collecting document from https://codehs.com/textbook/intropython_textbook/
+2026-07-22 01:23:31,413 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:23:31,589 | INFO | src.collectors.docs_collector | Document created successfully (id=b8a7f84e-b0a7-4471-8675-424b6ad18296)
+2026-07-22 01:23:31,591 | INFO | src.cleaners.document_cleaner | Cleaning document (id=b8a7f84e-b0a7-4471-8675-424b6ad18296)
+2026-07-22 01:23:31,591 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=b8a7f84e-b0a7-4471-8675-424b6ad18296)
+2026-07-22 01:23:31,591 | INFO | src.validator.document_validator | Validating document (id=b8a7f84e-b0a7-4471-8675-424b6ad18296)
+2026-07-22 01:23:31,591 | INFO | src.enrichers.document_enricher | Enriching document (id=b8a7f84e-b0a7-4471-8675-424b6ad18296)
+2026-07-22 01:23:31,591 | INFO | src.enrichers.document_enricher | Enrichment completed (id=b8a7f84e-b0a7-4471-8675-424b6ad18296, words=105, chars=658, quality=0.50)
+2026-07-22 01:23:31,591 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:23:31,592 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:31,592 | INFO | src.pipelines.dataset_pipeline | Saved document (id=b8a7f84e-b0a7-4471-8675-424b6ad18296, title='Textbook: Intro to Python Textbook | CodeHS')
+2026-07-22 01:23:31,592 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://coddy.tech/docs/python/input-and-print
+2026-07-22 01:23:31,594 | INFO | src.collectors.docs_collector | Collecting document from https://coddy.tech/docs/python/input-and-print
+2026-07-22 01:23:31,664 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:23:31,700 | INFO | src.collectors.docs_collector | Document created successfully (id=9b8fd1e1-7ac3-490d-9e40-2f0e672218b9)
+2026-07-22 01:23:31,701 | INFO | src.cleaners.document_cleaner | Cleaning document (id=9b8fd1e1-7ac3-490d-9e40-2f0e672218b9)
+2026-07-22 01:23:31,702 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=9b8fd1e1-7ac3-490d-9e40-2f0e672218b9)
+2026-07-22 01:23:31,702 | INFO | src.validator.document_validator | Validating document (id=9b8fd1e1-7ac3-490d-9e40-2f0e672218b9)
+2026-07-22 01:23:31,702 | INFO | src.enrichers.document_enricher | Enriching document (id=9b8fd1e1-7ac3-490d-9e40-2f0e672218b9)
+2026-07-22 01:23:31,702 | INFO | src.enrichers.document_enricher | Enrichment completed (id=9b8fd1e1-7ac3-490d-9e40-2f0e672218b9, words=742, chars=4361, quality=1.00)
+2026-07-22 01:23:31,702 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:23:31,703 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:31,703 | INFO | src.pipelines.dataset_pipeline | Saved document (id=9b8fd1e1-7ac3-490d-9e40-2f0e672218b9, title='Runnable Python Docs: Input & Print | Coddy')
+2026-07-22 01:23:33,369 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:23:33,370 | INFO | src.storage.jsonl_store | Loaded 10 objects
+2026-07-22 01:23:33,371 | INFO | src.storage.jsonl_store | Saving 10 objects
+2026-07-22 01:23:33,371 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:23:33,372 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:33,372 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:23:33,374 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:33,374 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:23:33,375 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:33,375 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:23:33,376 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:33,376 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:23:33,376 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:33,376 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:23:33,377 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:33,377 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:23:33,377 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:33,377 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:23:33,379 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:33,379 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:23:33,414 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:33,415 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:23:33,416 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:23:33,416 | INFO | src.storage.jsonl_store | Finished saving 10 objects
+2026-07-22 01:23:33,416 | INFO | src.storage.jsonl_store | Replacing all records in data/raw/documents.jsonl
+2026-07-22 01:23:33,419 | INFO | src.storage.jsonl_store | Successfully replaced dataset with 5 objects
+2026-07-22 01:24:12,880 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://docs.python.org/3/tutorial/
+2026-07-22 01:24:12,880 | INFO | src.collectors.docs_collector | Collecting document from https://docs.python.org/3/tutorial/
+2026-07-22 01:24:12,949 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:24:12,984 | INFO | src.collectors.docs_collector | Document created successfully (id=dc90e3a2-7dd3-457f-9738-aefb7120b695)
+2026-07-22 01:24:12,985 | INFO | src.cleaners.document_cleaner | Cleaning document (id=dc90e3a2-7dd3-457f-9738-aefb7120b695)
+2026-07-22 01:24:12,985 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=dc90e3a2-7dd3-457f-9738-aefb7120b695)
+2026-07-22 01:24:12,986 | INFO | src.validator.document_validator | Validating document (id=dc90e3a2-7dd3-457f-9738-aefb7120b695)
+2026-07-22 01:24:12,986 | INFO | src.enrichers.document_enricher | Enriching document (id=dc90e3a2-7dd3-457f-9738-aefb7120b695)
+2026-07-22 01:24:12,986 | INFO | src.enrichers.document_enricher | Enrichment completed (id=dc90e3a2-7dd3-457f-9738-aefb7120b695, words=363, chars=2325, quality=0.50)
+2026-07-22 01:24:12,986 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:24:12,987 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:12,987 | INFO | src.pipelines.dataset_pipeline | Saved document (id=dc90e3a2-7dd3-457f-9738-aefb7120b695, title='The Python Tutorial — Python 3.14.6 documentation')
+2026-07-22 01:24:12,987 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://www.programiz.com/python-programming
+2026-07-22 01:24:12,987 | INFO | src.collectors.docs_collector | Collecting document from https://www.programiz.com/python-programming
+2026-07-22 01:24:13,371 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:24:13,409 | INFO | src.collectors.docs_collector | Document created successfully (id=464bad21-fc56-4e71-9663-5d92312933e5)
+2026-07-22 01:24:13,410 | INFO | src.cleaners.document_cleaner | Cleaning document (id=464bad21-fc56-4e71-9663-5d92312933e5)
+2026-07-22 01:24:13,411 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=464bad21-fc56-4e71-9663-5d92312933e5)
+2026-07-22 01:24:13,411 | INFO | src.validator.document_validator | Validating document (id=464bad21-fc56-4e71-9663-5d92312933e5)
+2026-07-22 01:24:13,411 | INFO | src.enrichers.document_enricher | Enriching document (id=464bad21-fc56-4e71-9663-5d92312933e5)
+2026-07-22 01:24:13,411 | INFO | src.enrichers.document_enricher | Enrichment completed (id=464bad21-fc56-4e71-9663-5d92312933e5, words=1061, chars=6769, quality=1.00)
+2026-07-22 01:24:13,411 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:24:13,412 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:13,412 | INFO | src.pipelines.dataset_pipeline | Saved document (id=464bad21-fc56-4e71-9663-5d92312933e5, title='Learn Python Programming')
+2026-07-22 01:24:13,412 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-22 01:24:13,412 | INFO | src.collectors.docs_collector | Collecting document from https://developer.mozilla.org/en-US/docs/Glossary/Python
+2026-07-22 01:24:13,490 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:24:13,537 | INFO | src.collectors.docs_collector | Document created successfully (id=50e90d68-87bf-4caf-8062-934db930fdd6)
+2026-07-22 01:24:13,539 | INFO | src.cleaners.document_cleaner | Cleaning document (id=50e90d68-87bf-4caf-8062-934db930fdd6)
+2026-07-22 01:24:13,539 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=50e90d68-87bf-4caf-8062-934db930fdd6)
+2026-07-22 01:24:13,539 | INFO | src.validator.document_validator | Validating document (id=50e90d68-87bf-4caf-8062-934db930fdd6)
+2026-07-22 01:24:13,539 | INFO | src.enrichers.document_enricher | Enriching document (id=50e90d68-87bf-4caf-8062-934db930fdd6)
+2026-07-22 01:24:13,539 | INFO | src.enrichers.document_enricher | Enrichment completed (id=50e90d68-87bf-4caf-8062-934db930fdd6, words=152, chars=1067, quality=0.50)
+2026-07-22 01:24:13,539 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:24:13,540 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:13,540 | INFO | src.pipelines.dataset_pipeline | Saved document (id=50e90d68-87bf-4caf-8062-934db930fdd6, title='Python - Glossary | MDN')
+2026-07-22 01:24:13,540 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://codehs.com/textbook/intropython_textbook/
+2026-07-22 01:24:13,541 | INFO | src.collectors.docs_collector | Collecting document from https://codehs.com/textbook/intropython_textbook/
+2026-07-22 01:24:13,973 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:24:14,176 | INFO | src.collectors.docs_collector | Document created successfully (id=12e36511-a3f2-44e7-a0b4-ada2afdf4bb9)
+2026-07-22 01:24:14,178 | INFO | src.cleaners.document_cleaner | Cleaning document (id=12e36511-a3f2-44e7-a0b4-ada2afdf4bb9)
+2026-07-22 01:24:14,178 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=12e36511-a3f2-44e7-a0b4-ada2afdf4bb9)
+2026-07-22 01:24:14,178 | INFO | src.validator.document_validator | Validating document (id=12e36511-a3f2-44e7-a0b4-ada2afdf4bb9)
+2026-07-22 01:24:14,178 | INFO | src.enrichers.document_enricher | Enriching document (id=12e36511-a3f2-44e7-a0b4-ada2afdf4bb9)
+2026-07-22 01:24:14,178 | INFO | src.enrichers.document_enricher | Enrichment completed (id=12e36511-a3f2-44e7-a0b4-ada2afdf4bb9, words=105, chars=658, quality=0.50)
+2026-07-22 01:24:14,179 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:24:14,180 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:14,180 | INFO | src.pipelines.dataset_pipeline | Saved document (id=12e36511-a3f2-44e7-a0b4-ada2afdf4bb9, title='Textbook: Intro to Python Textbook | CodeHS')
+2026-07-22 01:24:14,180 | INFO | src.pipelines.dataset_pipeline | Processing URL: https://coddy.tech/docs/python/input-and-print
+2026-07-22 01:24:14,180 | INFO | src.collectors.docs_collector | Collecting document from https://coddy.tech/docs/python/input-and-print
+2026-07-22 01:24:14,257 | INFO | src.collectors.docs_collector | Successfully downloaded page
+2026-07-22 01:24:14,304 | INFO | src.collectors.docs_collector | Document created successfully (id=cbfe3390-e782-43f0-baf5-4c4b3fded1c7)
+2026-07-22 01:24:14,306 | INFO | src.cleaners.document_cleaner | Cleaning document (id=cbfe3390-e782-43f0-baf5-4c4b3fded1c7)
+2026-07-22 01:24:14,306 | INFO | src.cleaners.document_cleaner | Finished cleaning document (id=cbfe3390-e782-43f0-baf5-4c4b3fded1c7)
+2026-07-22 01:24:14,307 | INFO | src.validator.document_validator | Validating document (id=cbfe3390-e782-43f0-baf5-4c4b3fded1c7)
+2026-07-22 01:24:14,307 | INFO | src.enrichers.document_enricher | Enriching document (id=cbfe3390-e782-43f0-baf5-4c4b3fded1c7)
+2026-07-22 01:24:14,308 | INFO | src.enrichers.document_enricher | Enrichment completed (id=cbfe3390-e782-43f0-baf5-4c4b3fded1c7, words=742, chars=4361, quality=1.00)
+2026-07-22 01:24:14,308 | INFO | src.storage.jsonl_store | Saving object to data/raw/documents.jsonl
+2026-07-22 01:24:14,309 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:14,309 | INFO | src.pipelines.dataset_pipeline | Saved document (id=cbfe3390-e782-43f0-baf5-4c4b3fded1c7, title='Runnable Python Docs: Input & Print | Coddy')
+2026-07-22 01:24:16,761 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:24:16,762 | INFO | src.storage.jsonl_store | Loaded 10 objects
+2026-07-22 01:24:16,763 | INFO | src.storage.jsonl_store | Saving 10 objects
+2026-07-22 01:24:16,764 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:24:16,765 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:16,765 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:24:16,766 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:16,766 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:24:16,767 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:16,767 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:24:16,768 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:16,768 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:24:16,768 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:16,768 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:24:16,769 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:16,769 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:24:16,769 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:16,769 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:24:16,769 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:16,769 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:24:16,771 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:16,771 | INFO | src.storage.jsonl_store | Saving object to data/versions/version_1.jsonl
+2026-07-22 01:24:16,771 | INFO | src.storage.jsonl_store | Object saved successfully
+2026-07-22 01:24:16,771 | INFO | src.storage.jsonl_store | Finished saving 10 objects
+2026-07-22 01:24:16,771 | INFO | src.storage.jsonl_store | Replacing all records in data/raw/documents.jsonl
+2026-07-22 01:24:16,772 | INFO | src.storage.jsonl_store | Successfully replaced dataset with 5 objects
+2026-07-22 01:24:22,416 | INFO | src.storage.jsonl_store | Reading records from data/raw/documents.jsonl
+2026-07-22 01:24:22,417 | INFO | src.storage.jsonl_store | Loaded 5 objects

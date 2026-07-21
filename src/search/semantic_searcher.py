@@ -11,6 +11,11 @@ from src.storage.jsonl_store import JSONLStore
 from src.utils.similarity import cosine_similarity
 from src.rag.context_builder import ContextBuilder
 from src.rag.prompt_builder import PromptBuilder
+
+import logging
+
+logger = logging.getLogger(__name__)
+
 class SemanticSearcher:
     
     def __init__(self,embedder,embedding_store,chunk_store):
@@ -21,15 +26,26 @@ class SemanticSearcher:
 
     def search(self,question):
 
+        logger.info("Semantic search started")
+
         query_vector=self.embedder.query_embed_generator(question)
 
+        logger.info("Query embedding generated")
+
         embeddings=self.embedding_store.read_all()
+        if not embeddings:
+            logger.warning("No embeddings found in embedding store")
+            return []
+
+        logger.info("Loaded %d embeddings", len(embeddings))
 
         results=[]
         similarity=0
         for embedding in embeddings:
             
             record={}
+            logger.info("Calculating similarity scores")
+
             similarity=cosine_similarity(
                 query_vector,
                 embedding.vector
@@ -46,17 +62,37 @@ class SemanticSearcher:
             key=lambda item:item["score"],
             reverse=True
         )
+        logger.info(
+            "Ranked %d chunks by similarity",
+            len(results)
+        )
 
         top_results=ranked[:3]
+        logger.info(
+            "Selected top %d chunks",
+            len(top_results)
+        )
 
         chunks=self.chunk_store.read_all()
-        list_chunk=[]
-        for result in top_results:
-            for chunk in chunks:
-                if result["chunk"]==chunk.id:
-                    list_chunk.append(chunk)
+        logger.info("Loaded %d chunks", len(chunks))
 
-        
+
+        chunk_map = {chunk.id: chunk for chunk in chunks}
+
+        list_chunk = []
+
+        for result in top_results:
+            chunk = chunk_map.get(result["chunk"])
+            if chunk:
+                list_chunk.append(chunk)
+
+        if not list_chunk:
+            logger.warning("Semantic search returned no matching chunks")
+            
+        logger.info(
+            "Semantic search completed (%d chunks returned)",
+            len(list_chunk)
+        )
         return list_chunk
 
                 

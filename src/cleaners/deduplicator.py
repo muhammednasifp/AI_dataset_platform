@@ -3,7 +3,7 @@
 # duplicate records from a dataset.
 #
 # Improves data quality and reduces storage.
-from src.storage.jsonl_store import JSONLStore
+
 class Deduplicator:
     
     def __init__(self,documents):
@@ -27,12 +27,14 @@ class Deduplicator:
         after = len(unique_docs)
 
         removed = before - after
-        print("removed:",removed)
 
+        if removed==0:
+            return 0
+        
         return unique_docs
 
-    def create_version_from_store(self):
-        pass
+        
+         
 
 # store=JSONLStore("data/raw/documents.jsonl")
 # documents=store.read_all()

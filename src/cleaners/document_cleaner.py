@@ -14,11 +14,19 @@
 # - Can be extended with additional cleaning tasks such as HTML removal,
 #   Unicode normalization, special character filtering, and text normalization.
 # -----------------------------------------------------------------------------
+
+import logging
+logger = logging.getLogger(__name__)
+
 class DocumentCleaner:
 
     def clean(self,document):
-        
+
+        logger.info("Cleaning document (id=%s)", document.id)
+
         document.content=' '.join(document.content.split())
         document.title=' '.join(document.title.split())
+
+        logger.info("Finished cleaning document (id=%s)", document.id)
 
         return document

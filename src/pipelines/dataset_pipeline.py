@@ -21,8 +21,14 @@ from src.collectors.docs_collector import DocsCollector
 from src.storage.jsonl_store import JSONLStore
 from src.validator.document_validator import DocumentValidator
 from src.cleaners.document_cleaner import DocumentCleaner
+from src.cleaners.deduplicator import Deduplicator
 from src.enrichers.document_enricher import DocumentEnricher
 from src.models.document import Document
+
+
+import logging
+logger = logging.getLogger(__name__)
+
 class DatasetPipeline:
 
     def __init__(self,config):
@@ -37,19 +43,33 @@ class DatasetPipeline:
 
         for url in urls:
 
+            logger.info("Processing URL: %s", url)
+
             doc=collector.collect(url)
             
-            if doc:
-                doc=cleaner.clean(doc)
+            if doc is None:
+                logger.error("Failed to collect document from %s", url)
+                continue
+
+            doc=cleaner.clean(doc)
 
             if validator.validate(doc,threshold=self.config.validation_threshold): 
 
                 doc=enricher_obj.enricher(doc)
                 store.save_one(doc)
-                print("saved:",doc.title)
+
+                logger.info(
+                    "Saved document (id=%s, title='%s')",
+                    doc.id,
+                    doc.title
+                )
             
             else:
-                print('error page',doc.title)
+                logger.warning(
+                    "Document failed validation (id=%s, title='%s')",
+                    doc.id,
+                    doc.title
+                )
         
         # chunk_store=JSONLStore(self.config.chunk_path)
         

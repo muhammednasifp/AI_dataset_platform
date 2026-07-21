@@ -8,6 +8,7 @@
 #
 # Similar to version control for code.
 from src.storage.jsonl_store import JSONLStore
+from src.models.document import Document
 import os
 
 class DataVersionManager:
@@ -32,7 +33,7 @@ class DataVersionManager:
         # os.path.join("data/versions", "version_1.jsonl")
         #
         # Works correctly across operating systems.
-        store=JSONLStore(new_path)
+        store=JSONLStore(new_path,model_class=Document)
         store.save_many(documents=documents)
 
         return new_path
@@ -57,11 +58,11 @@ class DataVersionManager:
         # Output:
         # ["version_1.jsonl", "version_2.jsonl"]
 
-manager = DataVersionManager(
-    "data/versions/"
-)
+# manager = DataVersionManager(
+#     "data/versions/"
+# )
 # store=JSONLStore("data/raw/documents.jsonl")
 # documents=store.read_all()
 # manager.create_version(documents=documents)
 
-manager.list_versions()
+# manager.list_versions()

@@ -17,17 +17,25 @@
 #   duplicate detection, language checks, and content quality constraints.
 # -----------------------------------------------------------------------------
 
+import logging
+logger = logging.getLogger(__name__)
+
 class DocumentValidator:
 
     def validate(self, document,threshold):
 
+        logger.info("Validating document (id=%s)", document.id)
+
         if not document.title: #here 'not' catches both None and empty tring("")
+            logger.warning("Validation failed: document (id=%s) has no title", document.id)
             return False
 
         if not document.content:
+            logger.warning("Validation failed: document (id=%s) has no content", document.id)
             return False
 
-        if len(document.content) < 100 :
+        if len(document.content) < threshold :
+            logger.warning("Validation failed: document (id=%s) short length", document.id)
             return False
 
         return True

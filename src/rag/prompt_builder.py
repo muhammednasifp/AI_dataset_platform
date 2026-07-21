@@ -6,9 +6,15 @@
 # Flow:
 # Context + Question -> Prompt
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 class PromptBuilder:
 
     def build(self,question,context):
+
+        logger.info("Building prompt")
 
         prompt=f"""
 
@@ -26,5 +32,10 @@ class PromptBuilder:
         Answer:
         
         """
+
+        logger.info(
+            "Prompt built successfully (%d characters)",
+            len(prompt)
+        )
     
         return prompt

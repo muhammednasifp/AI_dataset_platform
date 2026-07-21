@@ -18,7 +18,7 @@
 
 import logging
 import os
-def setpup_logging():
+def setup_logging():
     # Root Logger
     #
     # The root logger is the top-level logger in Python's logging hierarchy.
@@ -66,8 +66,8 @@ def setpup_logging():
 
     console_handler.setFormatter(formatter)
     #Set Format
-    os.makedirs("logs", exist_ok=True)
-    file_handler=logging.FileHandler("logs/app.log")
+    os.makedirs("src/logs", exist_ok=True)
+    file_handler=logging.FileHandler("src/logs/app.log")
     # FileHandler writes log messages to a file.
     #
     # The log file can be created automatically,
@@ -75,6 +75,7 @@ def setpup_logging():
     #
     # Ensure the log directory exists before creating
     # the FileHandler.
+    file_handler.setFormatter(formatter)
 
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)

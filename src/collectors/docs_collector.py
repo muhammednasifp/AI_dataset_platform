@@ -18,19 +18,50 @@
 # - Can be extended to support multiple websites, content extraction rules,
 #   retries, request timeouts, and metadata collection.
 # -----------------------------------------------------------------------------
+
+import logging
 import requests
 import uuid
 from bs4 import BeautifulSoup
+from src.exceptions.collector import DocumentCollectionError
 from src.models.document import Document
+
+logger = logging.getLogger(__name__)
 
 class DocsCollector:
     
-    def collect(self,url):
-        response=requests.get(url)
+    def collect(self,url): 
 
-        if response.status_code!=200:
-            return None
+        logger.info("Collecting document from %s", url)
+
+        try:
+            response = requests.get(url)
+
+        except requests.RequestException as e:
+
+            logger.exception(
+                "Failed to download %s",
+                url
+            )
+
+            raise DocumentCollectionError(
+                f"Unable to download document from {url}"
+            ) from e
+
+        if response.status_code != 200:
+
+            logger.error(
+                "HTTP %d returned for %s",
+                response.status_code,
+                url
+            )
+
+            raise DocumentCollectionError(
+                f"HTTP {response.status_code} returned for {url}"
+        )
         
+        logger.info("Successfully downloaded page")
+
         soup=BeautifulSoup(
             response.text,
             "html.parser"
@@ -39,9 +70,17 @@ class DocsCollector:
         if soup.title:
             title=soup.title.text
         else:
+            logger.warning("Page has no title. Using default title.")
             title="untitled"
-        
+
         paragraphs=soup.find_all("p")
+        
+        if not paragraphs:
+            logger.warning(
+                "No paragraph tags found in %s",
+                url
+            )
+        
 
         content=""
 
@@ -53,6 +92,11 @@ class DocsCollector:
 
         doc=Document(id=id,title=title,url=url,content=content,source="python_doc")
         
+        logger.info(
+            "Document created successfully (id=%s)",
+             doc.id
+        )
+
         return doc
 
 # col=DocsCollector()

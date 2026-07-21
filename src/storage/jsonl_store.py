@@ -23,14 +23,20 @@
 import json
 import os
 from dataclasses import asdict
+from src.exceptions.storage import StorageError
 
+import logging
 
+logger=logging.getLogger(__name__)
+
+from src.exceptions.storage import StorageError
 class JSONLStore:
     
     def __init__(self,path,model_class):
 
         self.path=path
         self.model_class = model_class
+        
         directory = os.path.dirname(path)
 
         os.makedirs(
@@ -39,44 +45,120 @@ class JSONLStore:
         )
     
     def save_one(self,document): 
-        data=asdict(document)
-        json_string=json.dumps(data)
+        logger.info(
+            "Saving object to %s",
+            self.path
+        )
 
-        with open(self.path,"a") as file:
-            file.write(json_string)
-            file.write("\n")
+        try:
+            data=asdict(document)
+            json_string=json.dumps(data)
+
+
+            with open(self.path,"a") as file:
+                file.write(json_string)
+                file.write("\n")
+        
+        except OSError as e:
+
+            logger.exception(
+                "Failed to save document to %s",
+                self.path
+            )
+
+            raise StorageError(f"Failed to Save document to '{self.path}'"
+            
+            ) from e
+            
+        logger.info(
+            "Object saved successfully"
+        )
 
     def save_many(self,documents):
+
+        logger.info(
+            "Saving %d objects",
+            len(documents)
+        )
         for document in documents:
             self.save_one(document=document)
 
-    def count(self):
-        count=0
+        logger.info(
+            "Finished saving %d objects",
+            len(documents)
+        )
 
-        with open(self.path,"r") as file:
-            for line in file:
-                count=count+1
+    def count(self):
+
+        logger.info(
+            "Counting records in %s",
+            self.path
+        )
+        try:
+            count=0
+
+            with open(self.path,"r") as file:
+                for line in file:
+                    count=count+1
         
+        except OSError as e:
+            logger.exception(
+                " Failed to Count document %s",
+                self.path
+            )
+            raise StorageError(f"Failed to count records in '{self.path}'.") from e
+            
         return count
 
     def read_all(self):
-        documents=[]
-        with open(self.path,"r") as file:
-            for line in file:
-                data=json.loads(line)
+        logger.info(
+            "Reading records from %s",
+            self.path
+        )
+        try:
+            documents=[]
+            with open(self.path,"r") as file:
+                for line in file:
+                    data=json.loads(line)
 
-                doc=self.model_class(**data)
-                documents.append(doc)      
+                    doc=self.model_class(**data)
+                    documents.append(doc)   
+            
+           
+        except OSError as e:
+              raise StorageError(
+                f"Failed to read data from '{self.path}'."
+            ) from e
+        
+        logger.info(
+            "Loaded %d objects",
+            len(documents)
+        )   
         return documents
 
     def replace_all(self,documents):
 
-        with open(self.path,"w") as file:
-            for document in documents:
-                data=asdict(document)
-                json_string=json.dumps(data)
-                file.write(json_string)
-                file.write("\n")
+        logger.info(
+            "Replacing all records in %s",
+            self.path
+        )
+
+        try:
+            with open(self.path,"w") as file:
+                for document in documents:
+                    data=asdict(document)
+                    json_string=json.dumps(data)
+                    file.write(json_string)
+                    file.write("\n")
+        except OSError as e:
+            raise StorageError(
+                f"Failed to replace data in '{self.path}'."
+            ) from e
+
+        logger.info(
+            "Successfully replaced dataset with %d objects",
+            len(documents)
+        )
     # replace_all()
     #
     # Replaces the entire dataset with a new
