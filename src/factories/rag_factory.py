@@ -14,6 +14,7 @@ class RAGFactory:
     def factory(self):
 
         embedder=EmbeddingGenerator(self.config.embedding_model)
+        
         embedding_store=JSONLStore(
                 self.config.embedding_path,
                 model_class=Embedding

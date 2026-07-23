@@ -8,7 +8,7 @@
 # = DatasetComparator
 
 from src.analytics.dataset_analyzer import DatasetAnalyzer
-from src.storage.version_manager import DataVersionManager
+
 class Comparator:
 
     def __init__(self,version_1,version_2):

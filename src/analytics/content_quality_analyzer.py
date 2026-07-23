@@ -19,7 +19,13 @@
 # - Intended as a lightweight quality analysis component within the analytics
 #   layer of the dataset pipeline.
 # -----------------------------------------------------------------------------
-from src.storage.jsonl_store import JSONLStore
+# from src.storage.jsonl_store import JSONLStore
+
+import logging
+
+logger=logging.getLogger(__name__)
+
+
 
 class ContentQualityAnalyzer:
 
@@ -31,6 +37,8 @@ class ContentQualityAnalyzer:
                             # Threshold
                             # A configurable limit used to classify documents.
                             # Different datasets may require different thresholds.
+    
+
         short_docs=[]
 
         for document in self.documents:
@@ -39,6 +47,8 @@ class ContentQualityAnalyzer:
                 short_docs.append(document)
 
         return short_docs
+
+    
 
     def long_documents(self,threshold=500):
 
@@ -51,6 +61,7 @@ class ContentQualityAnalyzer:
         return long_docs
 
     def noisy_documents(self,threshold=3):
+
 
         noise_doc=[]
         noise_keywords = [
@@ -76,6 +87,7 @@ class ContentQualityAnalyzer:
         return noise_doc
     
     def high_quality_count(self):
+
 
         count = 0
 

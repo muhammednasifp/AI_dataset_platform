@@ -26,10 +26,10 @@ class FAISStore:
 
         
         return self
-faiss=FAISStore()
+# faiss=FAISStore()
 
 
-embedding_store=JSONLStore("data/processed/embeddings.jsonl",model_class=Embedding)
-embedding=embedding_store.read_all()
+# embedding_store=JSONLStore("data/processed/embeddings.jsonl",model_class=Embedding)
+# embedding=embedding_store.read_all()
 
-faiss.build_index(embedding=embedding)
+# faiss.build_index(embedding=embedding)

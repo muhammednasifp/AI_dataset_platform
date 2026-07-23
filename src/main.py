@@ -17,7 +17,7 @@ urls=[
 while True:
 
     print("---------AI Knowledge Platform---------\n\n")
-    print("1.Build Dataset\n2.Deduplicator\n3.Ask Questions(RAG)\n4.Get Report\n5.Exit\n")
+    print("1.Build Dataset\n2.Deduplicator\n3.Compare Versions\n4.Ask Question\n5.Exit")
 
     choice=int(input("Enter Choice:"))
     
@@ -26,15 +26,19 @@ while True:
             case 1:
                 obj=DatasetPipeline(config=config)
                 obj.Dataset(urls=urls)
-            
+                
             case 2:
-                obj=DeduplicatorPipeline(version_path=config.version_path,
-                                         jsonl_path=config.jsonl_path)
+                obj=DeduplicatorPipeline(config=config)
                 
                 if obj.build_duplicator()==[]:
                      print("No duplicates found")
-
+                else:
+                     print("Deduplication is completed")
+            
             case 3:
+              pass
+
+            case 4:
                 question=input("prompt:")
                 obj=RAGFactory(config)
                 rag_obj=obj.factory()
@@ -48,12 +52,12 @@ while True:
                 print(answer)
                 print("\n")
             
-            case 4:
+            case 5:
                 pipline=AnalyticsPipeline(config=config)
                 report_obj=pipline.build_report()
                 print(report_obj.generate_text())
 
-            case 5:
+            case 6:
                 exit()
                 
 

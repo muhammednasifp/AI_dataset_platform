@@ -5,6 +5,11 @@ from src.analytics.quality_scorer import QualityScorer
 from src.analytics.dataset_report import DatasetReport
 from src.models.document import Document
 from src.storage.jsonl_store import JSONLStore
+
+import logging
+
+logger=logging.getLogger(__name__)
+
 class AnalyticsPipeline:
 
     def __init__(self,config):
@@ -12,6 +17,8 @@ class AnalyticsPipeline:
         self.config=config
 
     def build_report(self):
+
+        logger.info("Starting dataset analytics")
         
         store=JSONLStore(
             self.config.jsonl_path,
@@ -20,6 +27,10 @@ class AnalyticsPipeline:
 
         documents=store.read_all()
 
+        if documents == []:
+            logger.warning("Dataset is empty. No analytics generated.")
+            return 0
+
         dataset_analyzer=DatasetAnalyzer(documents=documents)
 
         content_analyzer=ContentQualityAnalyzer(documents=documents)
@@ -27,5 +38,7 @@ class AnalyticsPipeline:
         scorer=QualityScorer(documents=documents)
 
         report_obj=DatasetReport(dataset_analyzer=dataset_analyzer,content_analyzer=content_analyzer,scorer=scorer)
+
+        logger.info("Generated Dataset Report")
 
         return report_obj

@@ -28,17 +28,34 @@
 # Embedding Object
 #   ↓
 # embeddings.jsonl
+from src.exceptions.embedding import EmbeddingError
 from src.models.embedding import Embedding
 from sentence_transformers import SentenceTransformer
 from src.storage.jsonl_store import JSONLStore
 from src.models.chunk import Chunk
 
+import logging
+
+logger=logging.getLogger(__name__)
+
 class EmbeddingGenerator:
 
     def __init__(self,embedding_model):
-       self.model=SentenceTransformer(embedding_model)
+        logger.info("Loading embedding model: %s", embedding_model)
+        try:
+    
+            self.model=SentenceTransformer(embedding_model)
+            logger.info("Embedding model loaded successfully")
+        except Exception as e:
+            logger.exception("Failed to load embedding model")
+            raise EmbeddingError("Unable to load embedding model.") from e
 
     def generate(self, chunk):
+
+        logger.info(
+            "Generating embedding for chunk (id=%s)",
+            chunk.id
+        )
         # generate()
         #
         # Converts a Chunk into an Embedding.
@@ -49,6 +66,7 @@ class EmbeddingGenerator:
         # 3. Convert vector to Python list.
         # 4. Create Embedding object.
         # 5. Return Embedding.
+
         return Embedding(
             chunk_id=chunk.id,
             vector=self.model.encode(chunk.content).tolist()
@@ -56,7 +74,14 @@ class EmbeddingGenerator:
     
     def query_embed_generator(self,query):
 
+        logger.info("Generating query embedding")
+
         vector=self.model.encode(query).tolist()
+
+        logger.info(
+            "Query embedding generated (dimensions=%d)",
+            len(vector)
+        )
         
         return vector
 
