@@ -17,7 +17,12 @@ urls=[
 while True:
 
     print("---------AI Knowledge Platform---------\n\n")
-    print("1.Build Dataset\n2.Deduplicator\n3.Compare Versions\n4.Ask Question\n5.Exit")
+    print("""1.Build Dataset\n
+             2.Deduplicator\n
+             3.Compare Versions\n
+             4.Ask Question\n
+             5.Print Report\n
+             6.Exit""")
 
     choice=int(input("Enter Choice:"))
     

@@ -56,6 +56,7 @@ class EmbeddingGenerator:
             "Generating embedding for chunk (id=%s)",
             chunk.id
         )
+        
         # generate()
         #
         # Converts a Chunk into an Embedding.
@@ -71,7 +72,6 @@ class EmbeddingGenerator:
             chunk_id=chunk.id,
             vector=self.model.encode(chunk.content).tolist()
         )
-    
     def query_embed_generator(self,query):
 
         logger.info("Generating query embedding")

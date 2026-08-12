@@ -4,6 +4,7 @@ from src.cleaners.deduplicator import Deduplicator
 from src.storage.version_manager import DataVersionManager
 from src.models.document import Document
 from src.services.chunk_service import ChunkService
+from src.services.embedding_service import EmbeddingService
 
 import logging
 logger=logging.getLogger(__name__)
@@ -18,6 +19,7 @@ class DeduplicatorPipeline:
 
         store=JSONLStore(self.config.jsonl_path,model_class=Document)
         chunk_service=ChunkService(self.config.chunk_path)
+        embedding_service=EmbeddingService(self.config.embedding_path)
 
         documents=store.read_all()
 
@@ -28,22 +30,30 @@ class DeduplicatorPipeline:
 
         unique_docs=deduplicator_obj.remove_duplicates()
 
-        if unique_docs == 0:
+        if not unique_docs:
 
             return []
         
         version_manager=DataVersionManager(path=self.config.version_path)
         version_manager.create_version(documents=documents)
 
-        # store.replace_all(unique_docs)
+        store.replace_all(unique_docs)
 
         logger.info(len(unique_docs))
-        # for docs in unique_docs:
-        #     chunk_service.build_chunks(
-        #         document=docs,
-        #         chunk_size=self.config.chunk_size,
-        #         rebuild=True
-        #     )
+
+        chunks=chunk_service.rebuild_chunks(
+            documents=unique_docs,
+            chunk_size=self.config.chunk_size,
+        )
+
+        return embedding_service.rebuild_embeddings(
+            chunks=chunks,
+            embedding_model=self.config.embedding_model
+        )
+
+        
+
+
 
 
 

@@ -25,6 +25,7 @@ from src.cleaners.deduplicator import Deduplicator
 from src.enrichers.document_enricher import DocumentEnricher
 from src.models.document import Document
 from src.services.chunk_service import ChunkService
+from src.services.embedding_service import EmbeddingService
 
 import logging
 logger = logging.getLogger(__name__)
@@ -37,7 +38,8 @@ class DatasetPipeline:
     def Dataset(self,urls):
         collector=DocsCollector()
         store=JSONLStore(self.config.jsonl_path,model_class=Document)
-        chunk_store=ChunkService(self.config.chunk_path)
+        chunk_builder=ChunkService(path=self.config.chunk_path)
+        embedding_builder=EmbeddingService(path=self.config.embedding_path)
         validator=DocumentValidator()
         cleaner=DocumentCleaner()
         enricher_obj=DocumentEnricher()
@@ -58,12 +60,27 @@ class DatasetPipeline:
 
                 doc=enricher_obj.enricher(doc)
                 store.save_one(doc)
-                chunk_store.build_chunks(chunk_size=self.config.chunk_size ,document=doc)
-                
                 logger.info(
                     "Saved document (id=%s, title='%s')",
                     doc.id,
                     doc.title
+                )
+                chunk=chunk_builder.build_chunks(
+                    chunk_size=self.config.chunk_size,
+                    document=doc
+                )
+                
+                logger.info(
+                   "chunk Length=%s",len(chunk)
+                )
+                
+                embeddings=embedding_builder.build_embedding(
+                    chunks=chunk,
+                    embedding_model=self.config.embedding_model
+                )
+
+                logger.info(
+                   "embedding Length=%s",len(embeddings)
                 )
             
             else:

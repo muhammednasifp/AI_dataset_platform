@@ -27,7 +27,6 @@ from src.exceptions.collector import DocumentCollectionError
 from src.models.document import Document
 
 logger = logging.getLogger(__name__)
-
 class DocsCollector:
     
     def collect(self,url): 

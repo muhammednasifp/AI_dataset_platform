@@ -30,6 +30,7 @@ import logging
 logger=logging.getLogger(__name__)
 
 from src.exceptions.storage import StorageError
+
 class JSONLStore:
     
     def __init__(self,path,model_class):
