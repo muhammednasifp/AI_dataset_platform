@@ -20,16 +20,6 @@ class Deduplicator:
             if document.url not in seen_urls:
                 seen_urls.add(document.url)
                 unique_docs.append(document)
-
-
-        before = len(self.documents)
-
-        after = len(unique_docs)
-
-        removed = before - after
-
-        if removed==0:
-            return 0
         
         return unique_docs
 

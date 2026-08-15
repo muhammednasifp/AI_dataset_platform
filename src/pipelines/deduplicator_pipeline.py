@@ -17,24 +17,29 @@ class DeduplicatorPipeline:
          
     def build_duplicator(self):
 
+        logger.info("Deduplication Started")
+
         store=JSONLStore(self.config.jsonl_path,model_class=Document)
         chunk_service=ChunkService(self.config.chunk_path)
         embedding_service=EmbeddingService(self.config.embedding_path)
 
         documents=store.read_all()
 
-        if documents is None:
+        if not documents:
+            logger.warning("Dataset is empty")
             return None
-
+        
         deduplicator_obj=Deduplicator(documents=documents)
 
         unique_docs=deduplicator_obj.remove_duplicates()
 
-        if not unique_docs:
-
-            return []
+        duplicates_removed=len(documents) - len(unique_docs)
+        if duplicates_removed==0:
+            logger.info("No duplicates found")
+            return 0
         
         version_manager=DataVersionManager(path=self.config.version_path)
+
         version_manager.create_version(documents=documents)
 
         store.replace_all(unique_docs)
@@ -46,11 +51,18 @@ class DeduplicatorPipeline:
             chunk_size=self.config.chunk_size,
         )
 
-        return embedding_service.rebuild_embeddings(
+        logger.info("Deduplication Ended")
+        embedding_count=embedding_service.rebuild_embeddings(
             chunks=chunks,
             embedding_model=self.config.embedding_model
         )
 
+        return{
+            "duplicates_removed": duplicates_removed,
+            "documents_after": len(unique_docs),
+            "chunks_created": len(chunks),
+            "embeddings_created": embedding_count
+        }
         
 
 

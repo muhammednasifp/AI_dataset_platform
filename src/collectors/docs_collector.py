@@ -38,7 +38,7 @@ class DocsCollector:
 
         except requests.RequestException as e:
 
-            logger.exception(
+            logger.error(
                 "Failed to download %s",
                 url
             )
@@ -57,7 +57,9 @@ class DocsCollector:
 
             raise DocumentCollectionError(
                 f"HTTP {response.status_code} returned for {url}"
-        )
+                
+            )
+        
         
         logger.info("Successfully downloaded page")
 
@@ -79,7 +81,6 @@ class DocsCollector:
                 "No paragraph tags found in %s",
                 url
             )
-        
 
         content=""
 

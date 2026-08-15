@@ -26,7 +26,7 @@ from src.enrichers.document_enricher import DocumentEnricher
 from src.models.document import Document
 from src.services.chunk_service import ChunkService
 from src.services.embedding_service import EmbeddingService
-
+from src.exceptions.collector import DocumentCollectionError
 import logging
 logger = logging.getLogger(__name__)
 
@@ -47,13 +47,16 @@ class DatasetPipeline:
         for url in urls:
 
             logger.info("Processing URL: %s", url)
-
-            doc=collector.collect(url)
+            try:
+                doc=collector.collect(url)
             
-            if doc is None:
-                logger.error("Failed to collect document from %s", url)
+            except DocumentCollectionError as e:
+                logger.error("Failed to collect %s: %s", url, e)
                 continue
 
+            if doc is None:
+                continue
+            
             doc=cleaner.clean(doc)
 
             if validator.validate(doc,threshold=self.config.validation_threshold): 
@@ -71,7 +74,7 @@ class DatasetPipeline:
                 )
                 
                 logger.info(
-                   "chunk Length=%s",len(chunk)
+                    "chunk Length=%s",len(chunk)
                 )
                 
                 embeddings=embedding_builder.build_embedding(
@@ -80,7 +83,7 @@ class DatasetPipeline:
                 )
 
                 logger.info(
-                   "embedding Length=%s",len(embeddings)
+                    "embedding Length=%s",len(embeddings)
                 )
             
             else:
@@ -89,6 +92,6 @@ class DatasetPipeline:
                     doc.id,
                     doc.title
                 )
-            
+        
         
 

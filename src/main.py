@@ -6,6 +6,7 @@ from src.pipelines.deduplicator_pipeline import DeduplicatorPipeline
 from src.loger_config import setup_logging
 config=Config()
 setup_logging()
+
 urls=[
     "https://docs.python.org/3/tutorial/",
     "https://www.programiz.com/python-programming",
@@ -16,18 +17,19 @@ urls=[
 
 while True:
 
-    print("---------AI Knowledge Platform---------\n\n")
-    print("""1.Build Dataset\n
-             2.Deduplicator\n
-             3.Compare Versions\n
-             4.Ask Question\n
-             5.Print Report\n
-             6.Exit""")
+    print("\n---------AI Knowledge Platform---------\n\n")
+    print(
+        "1. Build Dataset\n"
+        "2. Deduplicator\n"
+        "3. Compare Versions\n"
+        "4. Ask Question\n"
+        "5. Print Report\n"
+        "6. Exit"
+    )
 
     choice=int(input("Enter Choice:"))
     
     match choice:
-
             case 1:
                 obj=DatasetPipeline(config=config)
                 obj.Dataset(urls=urls)
@@ -35,11 +37,20 @@ while True:
             case 2:
                 obj=DeduplicatorPipeline(config=config)
                 
-                if obj.build_duplicator()==[]:
-                     print("No duplicates found")
+                result=obj.build_duplicator()
+
+                if result is None:
+                    print("Empty Dataset!!!")
+
+                if result==0:
+                    print("No duplicates Found!!!!")
                 else:
-                     print("Deduplication is completed")
-            
+                    print(
+                        f"\nDuplicates removed : {result['duplicates_removed']}\n"
+                        f"Documents after     : {result['documents_after']}\n"
+                        f"Chunks created      : {result['chunks_created']}\n"
+                        f"Embeddings created  : {result['embeddings_created']}"
+                    )
             case 3:
               pass
 
