@@ -41,6 +41,7 @@ logger=logging.getLogger(__name__)
 class EmbeddingGenerator:
 
     def __init__(self,embedding_model):
+        
         logger.info("Loading embedding model: %s", embedding_model)
         try:
     

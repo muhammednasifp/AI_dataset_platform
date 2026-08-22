@@ -24,8 +24,9 @@ import pandas as pd
 
 from src.storage.jsonl_store import  JSONLStore
 from dataclasses import asdict
+from src.models.document import Document
 
-store=JSONLStore("data/raw/documents.jsonl")
+store=JSONLStore("data/raw/documents.jsonl",model_class=Document)
 
 documents=store.read_all()
 

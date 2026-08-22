@@ -6,6 +6,7 @@
 # Flow:
 # Prompt -> LLM -> Answer
 import logging
+from src.exceptions.generator import GeneratorError
 
 logger = logging.getLogger(__name__)
 
@@ -27,10 +28,31 @@ class Generator:
             )
             logger.info("LLM response generated successfully")
 
-            return (response["message"]["content"])
         
-        except Exception:
-            logger.exception("Failed to generate LLM response")
-            return None
+        except Exception as e:
+            logger.exception("Answer generation failed")
+            raise GeneratorError(
+                "Unable to generate answer."
+            ) from e
+
+        content = response.get(
+            "message", {}
+        ).get("content")
+
+        if not content:
+
+            logger.error(
+                "Generator returned an empty response"
+            )
+
+            raise GeneratorError(
+                "Generator returned an empty response."
+            )
+
+        logger.info(
+            "Answer generated successfully"
+        )
+
+        return content
         
     

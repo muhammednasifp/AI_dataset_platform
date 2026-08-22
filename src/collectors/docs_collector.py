@@ -27,8 +27,38 @@ from src.exceptions.collector import DocumentCollectionError
 from src.models.document import Document
 
 logger = logging.getLogger(__name__)
+
 class DocsCollector:
+
+    def _extract_content(self,soup):
     
+        main_content = soup.find("main")
+
+        if main_content is None:
+            main_content = soup.find("article")
+
+        if main_content is None:
+            main_content = soup
+
+        paragraphs = main_content.find_all("p")
+
+        if not paragraphs:
+
+            logger.warning(
+                "No paragraph tags found in this page",
+            )
+
+        content = []
+
+        for paragraph in paragraphs:
+
+            text = paragraph.get_text(" ", strip=True)
+
+            if text:
+                content.append(text)
+
+        return "\n".join(content)
+        
     def collect(self,url): 
 
         logger.info("Collecting document from %s", url)
@@ -60,7 +90,6 @@ class DocsCollector:
                 
             )
         
-        
         logger.info("Successfully downloaded page")
 
         soup=BeautifulSoup(
@@ -68,25 +97,19 @@ class DocsCollector:
             "html.parser"
         )
 
-        if soup.title:
-            title=soup.title.text
-        else:
-            logger.warning("Page has no title. Using default title.")
-            title="untitled"
+        for element in soup([
+            "script",
+            "style",
+            "nav",
+            "footer",
+            "header",
+            "aside"
+        ]):
+            element.decompose()
 
-        paragraphs=soup.find_all("p")
-        
-        if not paragraphs:
-            logger.warning(
-                "No paragraph tags found in %s",
-                url
-            )
+        title = soup.title.get_text(" ", strip=True) if soup.title else "untitled"
 
-        content=""
-
-        for paragraph in paragraphs:
-            content+=paragraph.text
-            content+="\n"
+        content = self._extract_content(soup)
     
         id=str(uuid.uuid4())
 

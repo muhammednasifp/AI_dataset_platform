@@ -5,7 +5,7 @@ from src.storage.version_manager import DataVersionManager
 from src.models.document import Document
 from src.services.chunk_service import ChunkService
 from src.services.embedding_service import EmbeddingService
-
+from src.services.faiss_service import FAISSService
 import logging
 logger=logging.getLogger(__name__)
 
@@ -22,6 +22,11 @@ class DeduplicatorPipeline:
         store=JSONLStore(self.config.jsonl_path,model_class=Document)
         chunk_service=ChunkService(self.config.chunk_path)
         embedding_service=EmbeddingService(self.config.embedding_path)
+        faiss_builder=FAISSService(
+            embeddings_path=self.config.embedding_path,
+            faiss_index_path=self.config.faiss_index_path,
+            faiss_mapping_path=self.config.faiss_mapping_path
+        )
 
         documents=store.read_all()
 
@@ -34,6 +39,7 @@ class DeduplicatorPipeline:
         unique_docs=deduplicator_obj.remove_duplicates()
 
         duplicates_removed=len(documents) - len(unique_docs)
+        
         if duplicates_removed==0:
             logger.info("No duplicates found")
             return 0
@@ -56,7 +62,6 @@ class DeduplicatorPipeline:
             chunks=chunks,
             embedding_model=self.config.embedding_model
         )
-
         return{
             "duplicates_removed": duplicates_removed,
             "documents_after": len(unique_docs),

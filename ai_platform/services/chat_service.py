@@ -32,7 +32,7 @@ class ChatService:
             }
 
 
-        factory_obj=RAGFactory(config=Config)
+        factory_obj=RAGFactory(config=Config())
         rag_obj=factory_obj.factory()
 
         try:
@@ -46,7 +46,7 @@ class ChatService:
 
             return{
                 "success":False,
-                "Answer":answer,
+                "answer":"Failed to generate an answer.",
                 "error":str(e)
             }
 

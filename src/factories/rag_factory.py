@@ -23,13 +23,15 @@ class RAGFactory:
                 self.config.chunk_path,
                 model_class=Chunk
         )
-        context_builder=ContextBuilder()
-        prompt_builder=PromptBuilder()
         searcher=SemanticSearcher(
                 embedder=embedder,
                 embedding_store=embedding_store,
-                chunk_store=chunk_store
+                chunk_store=chunk_store,
+                top_k=self.config.top_k,
+                threshold=self.config.retrieval_threshold
         )
+        context_builder=ContextBuilder()
+        prompt_builder=PromptBuilder()
         generator=Generator()
 
         rag_obj=RAGPipeline(

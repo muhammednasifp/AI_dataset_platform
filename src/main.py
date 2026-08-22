@@ -1,11 +1,14 @@
+from src.exceptions.generator import GeneratorError
 from src.pipelines.dataset_pipeline import DatasetPipeline
 from src.config import Config
 from src.factories.rag_factory import RAGFactory
 from src.pipelines.analytics_pipeline import AnalyticsPipeline
 from src.pipelines.deduplicator_pipeline import DeduplicatorPipeline
 from src.loger_config import setup_logging
+
 config=Config()
 setup_logging()
+rag_obj = RAGFactory(config).factory()
 
 urls=[
     "https://docs.python.org/3/tutorial/",
@@ -21,10 +24,9 @@ while True:
     print(
         "1. Build Dataset\n"
         "2. Deduplicator\n"
-        "3. Compare Versions\n"
-        "4. Ask Question\n"
-        "5. Print Report\n"
-        "6. Exit"
+        "3. Ask Question\n"
+        "4. Print Report\n"
+        "5. Exit"
     )
 
     choice=int(input("Enter Choice:"))
@@ -42,7 +44,7 @@ while True:
                 if result is None:
                     print("Empty Dataset!!!")
 
-                if result==0:
+                elif result==0:
                     print("No duplicates Found!!!!")
                 else:
                     print(
@@ -51,29 +53,39 @@ while True:
                         f"Chunks created      : {result['chunks_created']}\n"
                         f"Embeddings created  : {result['embeddings_created']}"
                     )
+
             case 3:
-              pass
+                question=input("prompt:").strip()
 
-            case 4:
-                question=input("prompt:")
-                obj=RAGFactory(config)
-                rag_obj=obj.factory()
-                answer=rag_obj.ask(question=question)
+                if not question:
+                    print("Question cannot be empty.")
+                    continue
+                try:
+                    answer = rag_obj.ask(question)
 
-                if answer is None:
+                except GeneratorError:
+                    print("Unable to generate an answer. Please try again.")
+                    continue
+
+                if not answer:
                      print("Something Happend.Try Again")
+                     continue
             
                 print("\n")
                 print("Answer:\n")
                 print(answer)
                 print("\n")
             
-            case 5:
+            case 4:
                 pipline=AnalyticsPipeline(config=config)
                 report_obj=pipline.build_report()
-                print(report_obj.generate_text())
+                if not report_obj:
+                    print("Empty Report!!!")
+                    continue
+                result=report_obj.generate_text()
+                print(result)
 
-            case 6:
+            case 5:
                 exit()
                 
 

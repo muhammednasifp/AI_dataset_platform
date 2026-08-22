@@ -11,18 +11,21 @@ from src.storage.jsonl_store import JSONLStore
 from src.utils.similarity import cosine_similarity
 from src.rag.context_builder import ContextBuilder
 from src.rag.prompt_builder import PromptBuilder
-
+from src.models.search_result import SearchResult
+from src.search.faiss_index import FAISSIndex
 import logging
 
 logger = logging.getLogger(__name__)
 
 class SemanticSearcher:
     
-    def __init__(self,embedder,embedding_store,chunk_store):
+    def __init__(self,embedder,embedding_store,chunk_store,top_k,threshold):
 
         self.embedder=embedder
         self.embedding_store=embedding_store
         self.chunk_store=chunk_store
+        self.top_k=top_k
+        self.threshold=threshold
 
     def search(self,question):
 
@@ -33,67 +36,102 @@ class SemanticSearcher:
         logger.info("Query embedding generated")
 
         embeddings=self.embedding_store.read_all()
+
         if not embeddings:
             logger.warning("No embeddings found in embedding store")
-            return []
+            return []   
 
         logger.info("Loaded %d embeddings", len(embeddings))
 
-        results=[]
-        similarity=0
-        for embedding in embeddings:
+        #FAISS
+        dimension=len(embeddings[0].vector)
+
+        faiss_index=FAISSIndex(dimension=dimension)
+
+        faiss_index.build(embeddings=embeddings)
+
+        results=faiss_index.search(
+            query_vector=query_vector,
+            top_k=self.top_k
+        )
+
+        results=[
+            result
+            for result in results
+            if result["score"]>=self.threshold
+        ]
+
+        #Normal searching
+
+        # results=[]
+        # similarity=0
+        # for embedding in embeddings:
             
-            record={}
-            logger.info("Calculating similarity scores")
+        #     record={}
+        #     logger.info("Calculating similarity scores")
 
-            similarity=cosine_similarity(
-                query_vector,
-                embedding.vector
-            )
+        #     similarity=cosine_similarity(
+        #         query_vector,
+        #         embedding.vector
+        #     )
 
-            record["chunk"]=embedding.chunk_id
-            record["score"]=similarity
+        #     record["chunk"]=embedding.chunk_id
+        #     record["score"]=similarity
 
-            results.append(record)
-        
-        
-        ranked=sorted(
-            results,
-            key=lambda item:item["score"],
-            reverse=True
-        )
-        logger.info(
-            "Ranked %d chunks by similarity",
-            len(results)
-        )
+        #     results.append(record)
+    
+        # ranked=sorted(
+        #     results,
+        #     key=lambda item:item["score"],
+        #     reverse=True
+        # )
+        # logger.info(
+        #     "Ranked %d chunks by similarity",
+        #     len(results)
+        # )
 
-        top_results=ranked[:3]
-        logger.info(
-            "Selected top %d chunks",
-            len(top_results)
-        )
+        # filtered_result=[
+        #     result
+        #     for result in ranked
+        #     if result["score"] >= self.threshold
+        # ]
+
+        # top_results=filtered_result[:self.top_k]
+
+        # logger.info(
+        #     "Retrieved %d chunks after threshold filtering",
+        #     len(top_results)
+        # )
+
 
         chunks=self.chunk_store.read_all()
-        logger.info("Loaded %d chunks", len(chunks))
 
+        logger.info("Loaded %d chunks", len(chunks))
 
         chunk_map = {chunk.id: chunk for chunk in chunks}
 
-        list_chunk = []
+        retrieved_chunks = []
 
-        for result in top_results:
+        for result in results:
             chunk = chunk_map.get(result["chunk"])
             if chunk:
-                list_chunk.append(chunk)
+                retrieved_chunks.append(
+                    SearchResult(
+                        chunk=chunk,
+                        score=result["score"]
+                    )
+                )
 
-        if not list_chunk:
+        if not retrieved_chunks:
             logger.warning("Semantic search returned no matching chunks")
+            return []
             
         logger.info(
             "Semantic search completed (%d chunks returned)",
-            len(list_chunk)
+            len(retrieved_chunks)
         )
-        return list_chunk
+
+        return retrieved_chunks 
 
                 
 # embedder=EmbeddingGenerator()
@@ -101,6 +139,7 @@ class SemanticSearcher:
 #     "data/processed/embeddings.jsonl",
 #     model_class=Embedding
 # )
+
 # chunk_store=JSONLStore("data/processed/chunks.jsonl",model_class=Chunk)
 # context_builder=ContextBuilder()
 # prompt_builder=PromptBuilder()

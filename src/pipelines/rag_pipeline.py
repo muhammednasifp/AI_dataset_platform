@@ -39,7 +39,11 @@ class RAGPipeline:
     def ask(self,question):
 
         chunks=self.searcher.search(question)
+        if not chunks:
+            return None
+        
         context=self.context_builder.build(chunks)
+
         prompt=self.prompt_builder.build(question,context)
 
         result=self.generator.generate(prompt)

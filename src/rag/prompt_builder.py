@@ -37,5 +37,7 @@ class PromptBuilder:
             "Prompt built successfully (%d characters)",
             len(prompt)
         )
-    
+
+        print(prompt)
+
         return prompt

@@ -12,8 +12,13 @@ class DatasetReport:
 
     def generate_data(self):
 
+       total_docs=self.analyzer.total_documents()
+
+       if total_docs==0:
+           return None
+
        return {
-            "total_docs":self.analyzer.total_documents(),
+            "total_docs":total_docs,
             "longest_doc_title": self.analyzer.longest_document().title,
             "longest_doc":self.analyzer.longest_document().metadata["word_count"],
             "shortest_doc_title": self.analyzer.shortest_document().title,
@@ -36,6 +41,9 @@ class DatasetReport:
     def generate_text(self):
 
         report_dict=self.generate_data()
+
+        if report_dict is None:
+                return None
 
         report = f"""
             ========== DATASET REPORT ==========

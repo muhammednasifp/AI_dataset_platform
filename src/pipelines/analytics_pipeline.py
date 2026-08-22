@@ -29,7 +29,7 @@ class AnalyticsPipeline:
 
         if documents == []:
             logger.warning("Dataset is empty. No analytics generated.")
-            return 0
+            return []
 
         dataset_analyzer=DatasetAnalyzer(documents=documents)
 

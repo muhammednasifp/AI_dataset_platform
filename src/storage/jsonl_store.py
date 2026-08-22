@@ -124,7 +124,7 @@ class JSONLStore:
 
                     doc=self.model_class(**data)
                     documents.append(doc)   
-            
+
            
         except OSError as e:
               raise StorageError(

@@ -13,15 +13,14 @@ logger = logging.getLogger(__name__)
 
 class ContextBuilder:
 
-    def build(self,chunks):
+    def build(self,results):
 
         content=""
 
-        logger.info("Building context from %d chunks", len(chunks))
+        logger.info("Building context from %d chunks", len(results))
 
-        for chunk in chunks:
-
-            content += chunk.content+"....\n"
+        for result in results:
+            content += result.chunk.content+"....\n"    
         
         logger.info(
             "Context built successfully (%d characters)",

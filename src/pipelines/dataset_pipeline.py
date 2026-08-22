@@ -21,12 +21,13 @@ from src.collectors.docs_collector import DocsCollector
 from src.storage.jsonl_store import JSONLStore
 from src.validator.document_validator import DocumentValidator
 from src.cleaners.document_cleaner import DocumentCleaner
-from src.cleaners.deduplicator import Deduplicator
 from src.enrichers.document_enricher import DocumentEnricher
 from src.models.document import Document
 from src.services.chunk_service import ChunkService
 from src.services.embedding_service import EmbeddingService
+from src.services.faiss_service import FAISSService
 from src.exceptions.collector import DocumentCollectionError
+
 import logging
 logger = logging.getLogger(__name__)
 
@@ -36,10 +37,19 @@ class DatasetPipeline:
         self.config=config
     
     def Dataset(self,urls):
+
         collector=DocsCollector()
-        store=JSONLStore(self.config.jsonl_path,model_class=Document)
+        store=JSONLStore(
+            self.config.jsonl_path,
+            model_class=Document
+        )
         chunk_builder=ChunkService(path=self.config.chunk_path)
         embedding_builder=EmbeddingService(path=self.config.embedding_path)
+        faiss_builder=FAISSService(
+            embeddings_path=self.config.embedding_path,
+            faiss_index_path=self.config.faiss_index_path,
+            faiss_mapping_path=self.config.faiss_mapping_path
+        )
         validator=DocumentValidator()
         cleaner=DocumentCleaner()
         enricher_obj=DocumentEnricher()
@@ -81,17 +91,24 @@ class DatasetPipeline:
                     chunks=chunk,
                     embedding_model=self.config.embedding_model
                 )
-
                 logger.info(
                     "embedding Length=%s",len(embeddings)
                 )
-            
+
             else:
                 logger.warning(
                     "Document failed validation (id=%s, title='%s')",
                     doc.id,
                     doc.title
                 )
+
+        count=faiss_builder.build_index()
+                        
+        logger.info(
+            "FAISS index contains %s vectors",count
+        )
+
+        return count
         
         
 
