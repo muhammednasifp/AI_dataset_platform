@@ -1,3 +1,5 @@
+from src.search.hybrid_searcher import HybridSearcher
+from src.search.keyword_searcher import KeywordSearcher
 from src.models.chunk import Chunk
 from src.models.embedding import Embedding
 from src.embedders.embedding_generator import EmbeddingGenerator
@@ -23,19 +25,29 @@ class RAGFactory:
                 self.config.chunk_path,
                 model_class=Chunk
         )
-        searcher=SemanticSearcher(
+        semantic_searcher=SemanticSearcher(
                 embedder=embedder,
                 embedding_store=embedding_store,
                 chunk_store=chunk_store,
                 top_k=self.config.top_k,
-                threshold=self.config.retrieval_threshold
+                threshold=self.config.retrieval_threshold,
+                faiss_index_path=self.config.faiss_index_path,
+                faiss_mapping_path=self.config.faiss_mapping_path
+        )
+        keyword_searcher=KeywordSearcher(
+                chunk_store=chunk_store
+        )
+        hybrid_searcher=HybridSearcher(
+            semantic_searcher=semantic_searcher,
+            keyword_searcher=keyword_searcher,
+            top_k=self.config.top_k
         )
         context_builder=ContextBuilder()
         prompt_builder=PromptBuilder()
         generator=Generator()
 
         rag_obj=RAGPipeline(
-                searcher=searcher,
+                searcher=hybrid_searcher,
                 generator=generator,
                 context_builder=context_builder,
                 prompt_builder=prompt_builder

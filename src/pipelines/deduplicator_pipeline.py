@@ -62,11 +62,15 @@ class DeduplicatorPipeline:
             chunks=chunks,
             embedding_model=self.config.embedding_model
         )
+
+        faiss_count=faiss_builder.build_index()
+        
         return{
             "duplicates_removed": duplicates_removed,
             "documents_after": len(unique_docs),
             "chunks_created": len(chunks),
-            "embeddings_created": embedding_count
+            "embeddings_created": embedding_count,
+            "faiss_created":faiss_count
         }
         
 

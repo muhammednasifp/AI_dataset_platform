@@ -19,13 +19,26 @@ logger = logging.getLogger(__name__)
 
 class SemanticSearcher:
     
-    def __init__(self,embedder,embedding_store,chunk_store,top_k,threshold):
+    def __init__(self,
+                 embedder,
+                 embedding_store,
+                 chunk_store,
+                 top_k,
+                 threshold,
+                 faiss_index_path,
+                 faiss_mapping_path
+
+    ):
 
         self.embedder=embedder
         self.embedding_store=embedding_store
         self.chunk_store=chunk_store
         self.top_k=top_k
         self.threshold=threshold
+        self.faiss_index_path=faiss_index_path
+        self.faiss_mapping_path=faiss_mapping_path
+
+        self.faiss_index = FAISSIndex()
 
     def search(self,question):
 
@@ -35,22 +48,25 @@ class SemanticSearcher:
 
         logger.info("Query embedding generated")
 
-        embeddings=self.embedding_store.read_all()
+        # if not embeddings:
+        #     logger.warning("No embeddings found in embedding store")
+        #     return []   
 
-        if not embeddings:
-            logger.warning("No embeddings found in embedding store")
-            return []   
+        # logger.info("Loaded %d embeddings", len(embeddings))
 
-        logger.info("Loaded %d embeddings", len(embeddings))
+        # #FAISS
+        # dimension=len(embeddings[0].vector)
 
-        #FAISS
-        dimension=len(embeddings[0].vector)
+        # faiss_index=FAISSIndex(dimension=dimension)
 
-        faiss_index=FAISSIndex(dimension=dimension)
+        # faiss_index.build(embeddings=embeddings)
 
-        faiss_index.build(embeddings=embeddings)
+        self.faiss_index.load(
+            index_path=self.faiss_index_path,
+            mapping_path=self.faiss_mapping_path
+        )
 
-        results=faiss_index.search(
+        results=self.faiss_index.search(
             query_vector=query_vector,
             top_k=self.top_k
         )

@@ -35,6 +35,7 @@ while True:
             case 1:
                 obj=DatasetPipeline(config=config)
                 obj.Dataset(urls=urls)
+                print("Dataset Created")
                 
             case 2:
                 obj=DeduplicatorPipeline(config=config)
@@ -48,10 +49,11 @@ while True:
                     print("No duplicates Found!!!!")
                 else:
                     print(
-                        f"\nDuplicates removed : {result['duplicates_removed']}\n"
+                        f"\nDuplicates removed: {result['duplicates_removed']}\n"
                         f"Documents after     : {result['documents_after']}\n"
                         f"Chunks created      : {result['chunks_created']}\n"
-                        f"Embeddings created  : {result['embeddings_created']}"
+                        f"Embeddings created  : {result['embeddings_created']}\n"
+                        f"faiss_created       :  {result['faiss_created']}"
                     )
 
             case 3:
@@ -79,9 +81,11 @@ while True:
             case 4:
                 pipline=AnalyticsPipeline(config=config)
                 report_obj=pipline.build_report()
+                
                 if not report_obj:
                     print("Empty Report!!!")
                     continue
+
                 result=report_obj.generate_text()
                 print(result)
 

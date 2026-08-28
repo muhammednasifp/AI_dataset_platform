@@ -1,17 +1,20 @@
+###Need Comments
+
 import json
 import faiss
 import numpy as np
 
 class FAISSIndex:
 
-    def __init__(self,dimension):
+    def __init__(self,dimension=None):
 
         self.dimension = dimension
 
-        self.index = faiss.IndexFlatIP(
-            dimension
-        )
+        self.index = None
         self.chunk_ids=[]
+
+        if dimension:
+            self.index=faiss.IndexFlatIP(dimension)
 
     def build(self,embeddings):
 
@@ -74,3 +77,12 @@ class FAISSIndex:
                 self.chunk_ids,
                 file
             )
+
+    def load(self,index_path,mapping_path):
+
+        self.index=faiss.read_index(
+              index_path
+        )
+
+        with open(mapping_path,"r") as file:
+            self.chunk_ids=json.load(file)
