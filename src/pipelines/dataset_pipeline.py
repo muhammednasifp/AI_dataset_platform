@@ -27,6 +27,8 @@ from src.services.chunk_service import ChunkService
 from src.services.embedding_service import EmbeddingService
 from src.services.faiss_service import FAISSService
 from src.exceptions.collector import DocumentCollectionError
+from src.exceptions.chunker import ChunkingError
+from src.exceptions.embedding import EmbeddingError
 
 import logging
 logger = logging.getLogger(__name__)
@@ -54,6 +56,11 @@ class DatasetPipeline:
         cleaner=DocumentCleaner()
         enricher_obj=DocumentEnricher()
 
+        documents_received = len(urls)
+        documents_processed = 0
+        documents_failed = 0
+        failed_documents=[]
+
         for url in urls:
 
             logger.info("Processing URL: %s", url)
@@ -61,10 +68,22 @@ class DatasetPipeline:
                 doc=collector.collect(url)
             
             except DocumentCollectionError as e:
+                documents_failed += 1
+                failed_documents.append({
+                    "url": "https://bad-site.com",
+                    "stage": "collection",
+                    "reason": "Unable to download document"
+                })
                 logger.error("Failed to collect %s: %s", url, e)
                 continue
 
             if doc is None:
+                documents_failed += 1
+                failed_documents.append({
+                "url": url,
+                "stage": "collection",
+                "reason": "Document is Empty"
+            })
                 continue
             
             doc=cleaner.clean(doc)
@@ -78,37 +97,69 @@ class DatasetPipeline:
                     doc.id,
                     doc.title
                 )
-                chunk=chunk_builder.build_chunks(
-                    chunk_size=self.config.chunk_size,
-                    document=doc
-                )
-                
-                logger.info(
-                    "chunk Length=%s",len(chunk)
-                )
-                
-                embeddings=embedding_builder.build_embedding(
-                    chunks=chunk,
-                    embedding_model=self.config.embedding_model
-                )
-                logger.info(
-                    "embedding Length=%s",len(embeddings)
-                )
+                try:
 
+                    chunk = chunk_builder.build_chunks(
+                        chunk_size=self.config.chunk_size,
+                        document=doc
+                    )
+
+                    logger.info(
+                        "chunk Length=%s",
+                        len(chunk)
+                    )
+
+                    embeddings = embedding_builder.build_embedding(
+                        chunks=chunk,
+                        embedding_model=self.config.embedding_model
+                    )
+
+                    logger.info(
+                        "embedding Length=%s",
+                        len(embeddings)
+                    )
+                    documents_processed=+1
+
+                except (ChunkingError, EmbeddingError) as e:
+
+                    documents_failed += 1
+                    failed_documents.append({
+                        "url": url,
+                        "stage": "chunking" if isinstance(e, ChunkingError)
+                                else "embedding",
+                        "reason": str(e)
+                    })
+
+                    logger.error(
+                        "Failed processing %s after storage: %s",
+                        url,
+                        e
+                    )
+                    continue
             else:
+                documents_failed += 1
+                failed_documents.append({
+                    "url": url,
+                    "stage": "validation",
+                    "reason": "Document failed validation"
+                })
                 logger.warning(
                     "Document failed validation (id=%s, title='%s')",
                     doc.id,
                     doc.title
                 )
 
-        count=faiss_builder.build_index()
-                        
+        count=faiss_builder.build_index()                
         logger.info(
             "FAISS index contains %s vectors",count
         )
 
-        return count
+        return {
+            "documents_received":documents_received,
+            "documents_processed":documents_processed,
+            "documents_failed":documents_failed,
+            "failed_documents":failed_documents
+        }
         
         
 

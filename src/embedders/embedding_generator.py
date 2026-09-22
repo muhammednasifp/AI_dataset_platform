@@ -51,13 +51,6 @@ class EmbeddingGenerator:
             logger.exception("Failed to load embedding model")
             raise EmbeddingError("Unable to load embedding model.") from e
 
-    def generate(self, chunk):
-
-        logger.info(
-            "Generating embedding for chunk (id=%s)",
-            chunk.id
-        )
-        
         # generate()
         #
         # Converts a Chunk into an Embedding.
@@ -68,11 +61,30 @@ class EmbeddingGenerator:
         # 3. Convert vector to Python list.
         # 4. Create Embedding object.
         # 5. Return Embedding.
+    def generate(self, chunk):
 
-        return Embedding(
-            chunk_id=chunk.id,
-            vector=self.model.encode(chunk.content).tolist()
+        logger.info(
+            "Generating embedding for chunk (id=%s)",
+            chunk.id
         )
+        try:
+            vector = self.model.encode(
+                chunk.content
+            ).tolist()
+
+            return Embedding(
+                chunk_id=chunk.id,
+                vector=vector
+            )
+
+        except Exception as e:
+            logger.exception(
+                "Failed to generate embedding for chunk (id=%s)",
+                chunk.id
+            )
+            raise EmbeddingError(
+                "Failed to generate embedding."
+            ) from e
     def query_embed_generator(self,query):
 
         logger.info("Generating query embedding")

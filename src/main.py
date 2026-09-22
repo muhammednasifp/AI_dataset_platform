@@ -15,7 +15,9 @@ urls=[
     "https://www.programiz.com/python-programming",
     "https://developer.mozilla.org/en-US/docs/Glossary/Python",
     "https://codehs.com/textbook/intropython_textbook/",
-    "https://coddy.tech/docs/python/input-and-print"   
+    "https://coddy.tech/docs/python/input-and-print",
+    "https://.tech/docs/python/input-and-print",   
+    "https://.tech/docs/python/input-and-print"
 ]
 
 while True:
@@ -34,8 +36,8 @@ while True:
     match choice:
             case 1:
                 obj=DatasetPipeline(config=config)
-                obj.Dataset(urls=urls)
-                print("Dataset Created")
+                result=obj.Dataset(urls=urls)
+                print(result)
                 
             case 2:
                 obj=DeduplicatorPipeline(config=config)

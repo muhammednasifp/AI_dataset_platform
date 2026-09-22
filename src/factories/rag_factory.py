@@ -10,7 +10,7 @@ from src.rag.prompt_builder import PromptBuilder
 from src.storage.jsonl_store import JSONLStore
 from src.pipelines.rag_pipeline import RAGPipeline
 
-class RAGFactory:
+class  RAGFactory:
     def __init__(self,config):
         self.config=config
     def factory(self):
