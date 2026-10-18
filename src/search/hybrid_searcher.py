@@ -31,7 +31,6 @@ class HybridSearcher:
             self.keyword_searcher.search(question)
         )
 
-
         semantic_results=self._normalize_scores(
             semantic_results
         )
@@ -83,10 +82,8 @@ class HybridSearcher:
         if max_score == min_score:
 
             return [
-                {
-                    **result,
-                    "normalized_score": 1.0
-                }
+                
+                (result,1.0)    
                 for result in results
             ]
 
